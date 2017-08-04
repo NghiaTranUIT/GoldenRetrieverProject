@@ -10,9 +10,39 @@
 
 @implementation WeatherObj (WeatherViewDataSource)
 
+-(NSString *)locationName {
+    return self.name;
+}
 
--(NSString *)title {
+-(NSString *)dateTime {
+    return @"TUEDAYS 9:00AM";
+}
+
+-(NSString *)bigIconImageName {
+    return @"icon";
+}
+
+-(NSString *)temperature {
+    return [NSString stringWithFormat:@"%@", self.mainData.temp];
+}
+
+-(NSString *)status {
+
+    // Nil
+    WeatherDataObj *data = self.weatherDatas.firstObject;
+    if (data == nil) {
+        return @"Unknown";
+    }
+
+    return [NSString stringWithFormat:@"%@", data.main];
+}
+
+-(NSString *)cityName {
     return self.systemData.country;
+}
+
+-(NSArray<id<WeatherAttributeDataSource>> *)weatherAttributes {
+    return @[self.wind, self.systemData, self.mainData];
 }
 
 @end

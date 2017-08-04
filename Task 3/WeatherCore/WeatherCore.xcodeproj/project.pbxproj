@@ -34,7 +34,7 @@
 		BA8B832E1F3475BD0047E635 /* WeatherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B83241F3475BD0047E635 /* WeatherCore.framework */; };
 		BA8B83331F3475BD0047E635 /* WeatherCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B83321F3475BD0047E635 /* WeatherCoreTests.m */; };
 		BA8B83351F3475BD0047E635 /* WeatherCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA8B83271F3475BD0047E635 /* WeatherCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA92C00A1F348728002BA1E8 /* NSArray+Map.h in Headers */ = {isa = PBXBuildFile; fileRef = BA92C0081F348728002BA1E8 /* NSArray+Map.h */; };
+		BA92C00A1F348728002BA1E8 /* NSArray+Map.h in Headers */ = {isa = PBXBuildFile; fileRef = BA92C0081F348728002BA1E8 /* NSArray+Map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA92C00B1F348728002BA1E8 /* NSArray+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C0091F348728002BA1E8 /* NSArray+Map.m */; };
 		BA92C00F1F348BBC002BA1E8 /* OpenWeatherService.h in Headers */ = {isa = PBXBuildFile; fileRef = BA92C00D1F348BBC002BA1E8 /* OpenWeatherService.h */; };
 		BA92C0101F348BBC002BA1E8 /* OpenWeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C00E1F348BBC002BA1E8 /* OpenWeatherService.m */; };
@@ -320,11 +320,11 @@
 				BA688F521F347CF100E9239E /* WeatherDataObj.h in Headers */,
 				BA688F4A1F347CA100E9239E /* CloudObj.h in Headers */,
 				BA688F421F347C8500E9239E /* MainDataObj.h in Headers */,
+				BA92C00A1F348728002BA1E8 /* NSArray+Map.h in Headers */,
 				BA688F4E1F347CAE00E9239E /* SystemDataObj.h in Headers */,
 				BA688F461F347C9100E9239E /* WindObj.h in Headers */,
 				BA92C0261F34968B002BA1E8 /* PublicHeader.h in Headers */,
 				BA92C0231F3495B2002BA1E8 /* WeatherViewModel.h in Headers */,
-				BA92C00A1F348728002BA1E8 /* NSArray+Map.h in Headers */,
 				BA688F581F347D7800E9239E /* LocationService.h in Headers */,
 				BA688F5D1F347D9200E9239E /* NetworkService.h in Headers */,
 				BA92C0191F3492CE002BA1E8 /* OpenWeatherConfiguration.h in Headers */,

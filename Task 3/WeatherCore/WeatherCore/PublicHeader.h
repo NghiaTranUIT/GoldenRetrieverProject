@@ -18,5 +18,6 @@
 #import "SystemDataObj.h"
 #import "WeatherDataObj.h"
 #import "WeatherObj.h"
+#import "NSArray+Map.h"
 
 #endif /* PublicHeader_h */
