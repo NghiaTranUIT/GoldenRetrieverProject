@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Requestable.h"
+
+typedef id (^CompletionBlock)(id obj);
+typedef id (^ErrorBlock)(NSError *error);
 
 @interface NetworkService : NSObject
+
+// Init service with URLSession
+// Support injection dependency
+-(instancetype) initWithURLSession:(NSURLSession *) session;
+
+// Execute all request
+-(void) executeRequest:(id<Requestable>) request;
 
 @end
