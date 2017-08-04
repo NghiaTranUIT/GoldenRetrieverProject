@@ -13,7 +13,7 @@
 @class NetworkService;
 @class OpenWeatherConfiguration;
 
-typedef id (^WeatherCompletionBlock)(WeatherObj *weather);
+typedef void (^WeatherCompletionBlock)(WeatherObj *weather);
 
 @interface OpenWeatherService : NSObject
 

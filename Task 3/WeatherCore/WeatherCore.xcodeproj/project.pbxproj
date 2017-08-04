@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BA688F261F34781800E9239E /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F241F34781800E9239E /* Constants.h */; };
-		BA688F271F34781800E9239E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F251F34781800E9239E /* Constants.m */; };
 		BA688F3A1F347A7000E9239E /* WeatherObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F381F347A7000E9239E /* WeatherObj.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA688F3B1F347A7000E9239E /* WeatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F391F347A7000E9239E /* WeatherObj.m */; };
 		BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F3C1F347C5800E9239E /* CoordinateObj.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,7 +59,6 @@
 
 /* Begin PBXFileReference section */
 		BA688F241F34781800E9239E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		BA688F251F34781800E9239E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		BA688F381F347A7000E9239E /* WeatherObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherObj.h; sourceTree = "<group>"; };
 		BA688F391F347A7000E9239E /* WeatherObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherObj.m; sourceTree = "<group>"; };
 		BA688F3C1F347C5800E9239E /* CoordinateObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateObj.h; sourceTree = "<group>"; };
@@ -122,6 +120,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3106DC1F34B2A4009E4ABA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				BA8B83271F3475BD0047E635 /* WeatherCore.h */,
+				BA92C0251F3495E1002BA1E8 /* PublicHeader.h */,
+				BA8B83281F3475BD0047E635 /* Info.plist */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
 		BA688F201F34780000E9239E /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,12 +229,10 @@
 		BA8B83261F3475BD0047E635 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
-				BA92C01F1F34959B002BA1E8 /* View Model */,
+				BA3106DC1F34B2A4009E4ABA /* Header */,
 				BA92C01E1F34958F002BA1E8 /* Constant */,
+				BA92C01F1F34959B002BA1E8 /* View Model */,
 				BA688F201F34780000E9239E /* Source */,
-				BA8B83271F3475BD0047E635 /* WeatherCore.h */,
-				BA92C0251F3495E1002BA1E8 /* PublicHeader.h */,
-				BA8B83281F3475BD0047E635 /* Info.plist */,
 			);
 			path = WeatherCore;
 			sourceTree = "<group>";
@@ -284,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				BA688F241F34781800E9239E /* Constants.h */,
-				BA688F251F34781800E9239E /* Constants.m */,
 			);
 			name = Constant;
 			sourceTree = "<group>";
@@ -447,7 +452,6 @@
 				BA92C0161F349140002BA1E8 /* FetchWeatherRequestParam.m in Sources */,
 				BA688F431F347C8500E9239E /* MainDataObj.m in Sources */,
 				BA92C0241F3495B2002BA1E8 /* WeatherViewModel.m in Sources */,
-				BA688F271F34781800E9239E /* Constants.m in Sources */,
 				BA92C00B1F348728002BA1E8 /* NSArray+Map.m in Sources */,
 				BA688F4B1F347CA100E9239E /* CloudObj.m in Sources */,
 				BA688F4F1F347CAE00E9239E /* SystemDataObj.m in Sources */,

@@ -9,9 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "Parammeter.h"
 
+typedef enum : NSUInteger {
+    HTTPMethodGET = 0,
+    HTTPMethodPOST,
+    HTTPMethodPUT
+} HTTPMethod;
+
 @protocol Requestable <NSObject>
 
 @property (copy, readonly) NSString *path;
+@property (assign, readonly) HTTPMethod httpMethod;
 
 -(instancetype) initWithParam:(id<Parammeter>) param;
 

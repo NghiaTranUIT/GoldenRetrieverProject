@@ -23,13 +23,16 @@
     [super viewDidLoad];
 
     self.viewModel = [[WeatherViewModel alloc] init];
+
+    // Fetch
+    [self fetchWeatherAPI];
 }
 
 
 #pragma mark - API
 -(void) fetchWeatherAPI {
 
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(0, 0);
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(10.762622, 106.660172);
 
     __weak typeof(self) weakSelf = self;
     [self.viewModel fetchWeatherAtLocation:location completion:^void(WeatherObj *weather) {

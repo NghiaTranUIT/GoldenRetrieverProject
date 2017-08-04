@@ -20,6 +20,12 @@
 
 @implementation OpenWeatherService
 
+#pragma mark - Init
+
+-(instancetype) init {
+    return [self initWithNetworkService:[NetworkService new] configuration:[OpenWeatherConfiguration new]];
+}
+
 -(instancetype) initWithNetworkService:(NetworkService *) service {
     return [self initWithNetworkService:service configuration:[OpenWeatherConfiguration new]];
 }
@@ -36,9 +42,17 @@
     return self;
 }
 
+#pragma mark - Fetch Weather
+
 -(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) block {
+
+    // Param
     FetchWeatherRequestParam *param = [[FetchWeatherRequestParam alloc] initWithLocation:location appID:self.configuration.appID];
+
+    // Request
     FetchWeatherRequest *request = [[FetchWeatherRequest alloc] initWithParam:param];
+
+    // Execute
     [self.networkService executeRequest:request];
 }
 

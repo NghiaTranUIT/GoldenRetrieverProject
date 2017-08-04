@@ -7,7 +7,32 @@
 //
 
 #import "WeatherViewModel.h"
+#import "OpenWeatherService.h"
+
+@interface WeatherViewModel ()
+
+@property (strong, nonatomic) OpenWeatherService *weatherService;
+
+@end
 
 @implementation WeatherViewModel
+
+-(instancetype) init {
+    self = [super init];
+
+    if (self) {
+
+        // Default service
+        self.weatherService = [[OpenWeatherService alloc] init];
+    }
+
+    return self;
+}
+
+-(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
+                    completion:(void (^)(WeatherObj *weather)) block {
+
+    [self.weatherService fetchWeatherAtLocation:location completion:block];
+}
 
 @end

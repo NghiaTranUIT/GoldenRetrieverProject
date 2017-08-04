@@ -8,7 +8,6 @@
 
 #import "FetchWeatherRequest.h"
 
-
 @interface FetchWeatherRequest ()
 
 @property (strong, nonatomic) id<Parammeter> param;
@@ -27,7 +26,11 @@
     return self;
 }
 
--(NSString *)path {
+-(HTTPMethod) httpMethod {
+    return HTTPMethodGET;
+}
+
+-(NSString *) path {
     return @"/data/2.5/weather";
 }
 
