@@ -10,6 +10,13 @@
 #import <WeatherCore/WeatherCore.h>
 #import "WeatherView.h"
 
+@protocol WeatherViewDataSource <NSObject>
+
+@property (copy, nonatomic, readonly) NSString *title;
+
+@end
+
+
 @interface WeatherObj (WeatherViewDataSource) <WeatherViewDataSource>
 
 @end

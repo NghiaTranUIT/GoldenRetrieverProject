@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol WeatherViewDataSource <NSObject>
-
-@property (copy, nonatomic, readonly) NSString *title;
-
-@end
+#import "WeatherViewDataSource.h"
 
 @interface WeatherView : UIView
 

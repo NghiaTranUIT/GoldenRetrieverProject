@@ -22,5 +22,8 @@
 
 @implementation WeatherView
 
+-(void) configureViewWithData:(id<WeatherViewDataSource>) data {
+
+}
 
 @end

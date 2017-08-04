@@ -17,6 +17,8 @@
 
 @end
 
-@interface WeatherObj (WeatherAttributeDataSource) <WeatherAttributeDataSource>
+@interface WeatherObj (WeatherAttributeDataSource)
+
+-(NSArray<id<WeatherAttributeDataSource>> *) weatherAttributes;
 
 @end

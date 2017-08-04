@@ -10,4 +10,8 @@
 
 @implementation WeatherObj (WeatherAttributeDataSource)
 
+-(NSArray<id<WeatherAttributeDataSource>> *)weatherAttributes {
+    return @[];
+}
+
 @end
