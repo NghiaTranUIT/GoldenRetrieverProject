@@ -18,7 +18,7 @@
 
 @implementation WeatherAttributeView
 
--(void) configureCellWithData:(id<WeatherAttributeViewData>) data {
+-(void) configureCellWithData:(id<WeatherAttributeDataSource>) data {
 
     // Layout data
     self.titleLbl.text = data.title;

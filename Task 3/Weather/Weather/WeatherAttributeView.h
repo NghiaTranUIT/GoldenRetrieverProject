@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol WeatherAttributeViewData <NSObject>
-
-@property (copy, nonatomic, readonly) NSString *title;
-@property (copy, nonatomic, readonly) NSString *value;
-@property (copy, nonatomic, readonly) NSString *iconName;
-
-@end
+#import "WeatherAttributeDataSource.h"
 
 @interface WeatherAttributeView : UIView
 
--(void) configureCellWithData:(id<WeatherAttributeViewData>) data;
+-(void) configureCellWithData:(id<WeatherAttributeDataSource>) data;
 
 @end

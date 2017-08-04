@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WeatherViewDataSource <NSObject>
+
+@property (copy, nonatomic, readonly) NSString *title;
+
+@end
+
 @interface WeatherView : UIView
+
+-(void) configureViewWithData:(id<WeatherViewDataSource>) data;
 
 @end

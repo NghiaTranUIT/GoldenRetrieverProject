@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
+@class WeatherObj;
 
 @interface WeatherViewModel : NSObject
+
+-(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
+                    completion:(void (^)(WeatherObj *weather)) block;
 
 @end
