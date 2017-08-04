@@ -28,7 +28,9 @@ In addition, Emoji will be represented by 2 unichar.
 
 So,
 ```
-    text.length 
+    NSString *emoji = @"🔥";
+    // Incorrect
+    // emoji.length = 2
 ```
 Another approach can be
 ```
