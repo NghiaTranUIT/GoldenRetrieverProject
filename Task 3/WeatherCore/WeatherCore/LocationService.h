@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "Constants.h"
+
+// Location
+typedef void (^LocationBlock)(CLLocation *);
 
 @interface LocationService : NSObject
+
++(instancetype) shareInstance;
+
++(CLAuthorizationStatus) authorizationStatus;
++(BOOL) locationServicesEnabled;
+
+-(void) fetchLocation:(LocationBlock) block errorBlock:(ErrorBlock) error;
 
 @end

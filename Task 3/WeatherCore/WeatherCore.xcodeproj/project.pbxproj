@@ -25,7 +25,7 @@
 		BA688F4F1F347CAE00E9239E /* SystemDataObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F4D1F347CAE00E9239E /* SystemDataObj.m */; };
 		BA688F521F347CF100E9239E /* WeatherDataObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F501F347CF100E9239E /* WeatherDataObj.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA688F531F347CF100E9239E /* WeatherDataObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F511F347CF100E9239E /* WeatherDataObj.m */; };
-		BA688F581F347D7800E9239E /* LocationService.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F561F347D7800E9239E /* LocationService.h */; };
+		BA688F581F347D7800E9239E /* LocationService.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F561F347D7800E9239E /* LocationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA688F591F347D7800E9239E /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F571F347D7800E9239E /* LocationService.m */; };
 		BA688F5D1F347D9200E9239E /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F5B1F347D9200E9239E /* NetworkService.h */; };
 		BA688F5E1F347D9200E9239E /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F5C1F347D9200E9239E /* NetworkService.m */; };
@@ -135,6 +135,13 @@
 				B690AF3DAA2F9D0D7E082685 /* Pods_WeatherCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA0ABD1F1F34CE4F004B0070 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		BA3106DC1F34B2A4009E4ABA /* Header */ = {
@@ -326,6 +333,7 @@
 		BA92C01F1F34959B002BA1E8 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA0ABD1F1F34CE4F004B0070 /* Location */,
 				BA92C0201F3495A2002BA1E8 /* Weather */,
 			);
 			name = "View Model";
@@ -359,6 +367,7 @@
 				BA92C0151F349140002BA1E8 /* FetchWeatherRequestParam.h in Headers */,
 				BA92C0261F34968B002BA1E8 /* PublicHeader.h in Headers */,
 				BA688F261F34781800E9239E /* Constants.h in Headers */,
+				BA688F581F347D7800E9239E /* LocationService.h in Headers */,
 				BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */,
 				BA688F6A1F347E5800E9239E /* Decodable.h in Headers */,
 				BA688F3A1F347A7000E9239E /* WeatherObj.h in Headers */,
@@ -370,7 +379,6 @@
 				BA3106E01F34BC4E009E4ABA /* BaseRequest.h in Headers */,
 				BA688F461F347C9100E9239E /* WindObj.h in Headers */,
 				BA92C0231F3495B2002BA1E8 /* WeatherViewModel.h in Headers */,
-				BA688F581F347D7800E9239E /* LocationService.h in Headers */,
 				BA688F5D1F347D9200E9239E /* NetworkService.h in Headers */,
 				BA92C0191F3492CE002BA1E8 /* OpenWeatherConfiguration.h in Headers */,
 				BA688F661F347DCF00E9239E /* Requestable.h in Headers */,

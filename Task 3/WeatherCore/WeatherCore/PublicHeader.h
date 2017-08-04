@@ -20,6 +20,6 @@
 #import "WeatherDataObj.h"
 #import "WeatherObj.h"
 #import "NSArray+Map.h"
-
+#import "LocationService.h"
 
 #endif /* PublicHeader_h */

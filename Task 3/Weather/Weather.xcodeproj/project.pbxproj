@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B582CD45B6270AB6650796AB /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF98449402C8F497CEAA0A8 /* Pods_Weather.framework */; };
+		BA0ABD271F34D002004B0070 /* LocationWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0ABD261F34D002004B0070 /* LocationWarningView.m */; };
+		BA0ABD291F34D00C004B0070 /* LocationWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0ABD281F34D00C004B0070 /* LocationWarningView.xib */; };
 		BA688F311F34785A00E9239E /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F2F1F34785A00E9239E /* WeatherViewController.m */; };
 		BA688F321F34785A00E9239E /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA688F301F34785A00E9239E /* WeatherViewController.xib */; };
 		BA688F361F34789500E9239E /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F351F34789500E9239E /* Router.m */; };
@@ -47,6 +49,9 @@
 /* Begin PBXFileReference section */
 		519AB5BF53CB19043176CB70 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8109F77BB8D34F21932D0F /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
+		BA0ABD251F34D002004B0070 /* LocationWarningView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationWarningView.h; sourceTree = "<group>"; };
+		BA0ABD261F34D002004B0070 /* LocationWarningView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationWarningView.m; sourceTree = "<group>"; };
+		BA0ABD281F34D00C004B0070 /* LocationWarningView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationWarningView.xib; sourceTree = "<group>"; };
 		BA3106E31F34BFF3009E4ABA /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/WeatherWorkspace-hihyhgxujatihbeutvrgbmsnzlaf/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		BA688F2E1F34785A00E9239E /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		BA688F2F1F34785A00E9239E /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
@@ -123,6 +128,16 @@
 				BA7E22281F34C88000C18D9A /* NSView+Constraint.m */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		BA0ABD241F34CFC9004B0070 /* Location Warning View */ = {
+			isa = PBXGroup;
+			children = (
+				BA0ABD251F34D002004B0070 /* LocationWarningView.h */,
+				BA0ABD261F34D002004B0070 /* LocationWarningView.m */,
+				BA0ABD281F34D00C004B0070 /* LocationWarningView.xib */,
+			);
+			name = "Location Warning View";
 			sourceTree = "<group>";
 		};
 		BA688F281F34782300E9239E /* Source */ = {
@@ -275,6 +290,7 @@
 		BA92C0361F349B4B002BA1E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA0ABD241F34CFC9004B0070 /* Location Warning View */,
 				BA92C0381F349B5C002BA1E8 /* WeatherAttributeView */,
 				BA92C0371F349B53002BA1E8 /* WeatherView */,
 			);
@@ -408,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0ABD291F34D00C004B0070 /* LocationWarningView.xib in Resources */,
 				BA92C0441F349BFB002BA1E8 /* attribute.jpg in Resources */,
 				BA92C0321F349842002BA1E8 /* SF-UI-Text-Medium.otf in Resources */,
 				BA92C0311F349842002BA1E8 /* SF-UI-Text-Light.otf in Resources */,
@@ -486,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0ABD271F34D002004B0070 /* LocationWarningView.m in Sources */,
 				BA688F361F34789500E9239E /* Router.m in Sources */,
 				BA92C0401F349B89002BA1E8 /* WeatherView.m in Sources */,
 				BA92C04C1F34A594002BA1E8 /* WeatherAttributeDataSource.m in Sources */,

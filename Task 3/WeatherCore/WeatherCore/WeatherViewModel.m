@@ -8,10 +8,12 @@
 
 #import "WeatherViewModel.h"
 #import "OpenWeatherService.h"
+#import "LocationService.h"
 
 @interface WeatherViewModel ()
 
 @property (strong, nonatomic) OpenWeatherService *weatherService;
+@property (strong, nonatomic) LocationService *locationService;
 
 @end
 
@@ -24,6 +26,7 @@
 
         // Default service
         self.weatherService = [[OpenWeatherService alloc] init];
+        self.locationService = [LocationService shareInstance];
     }
 
     return self;
