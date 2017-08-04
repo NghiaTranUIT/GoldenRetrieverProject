@@ -11,9 +11,9 @@
 
 @protocol Requestable <NSObject>
 
--(instancetype) initWithParam:(id<Parammeter>) param;
-
 @property (copy, readonly) NSString *path;
+
+-(instancetype) initWithParam:(id<Parammeter>) param;
 
 -(NSURLRequest *) buildRequest;
 

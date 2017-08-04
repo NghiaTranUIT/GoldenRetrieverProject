@@ -7,8 +7,11 @@
 //
 
 #import "WeatherViewController.h"
+#import <WeatherCore/WeatherCore.h>
 
 @interface WeatherViewController ()
+
+@property (strong, nonatomic) WeatherViewModel *viewModel;
 
 @end
 
@@ -16,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.viewModel = [[WeatherViewModel alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
