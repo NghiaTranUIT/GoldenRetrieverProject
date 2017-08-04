@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decodable.h"
 
-@interface WeatherDataObj : NSObject
+@interface WeatherDataObj : NSObject <Decodable>
 
-@property (assign, nonatomic, readonly) NSInteger ID;
+@property (strong, nonatomic, readonly) NSNumber *ID;
 @property (copy, nonatomic, readonly) NSString *_description;
 @property (copy, nonatomic, readonly) NSString *main;
 @property (copy, nonatomic, readonly) NSString *icon;

@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decodable.h"
 
-@interface WindObj : NSObject
+@interface WindObj : NSObject <Decodable>
+
+@property (strong, nonatomic, readonly) NSNumber *speed;
+@property (strong, nonatomic, readonly) NSNumber *deg;
 
 @end

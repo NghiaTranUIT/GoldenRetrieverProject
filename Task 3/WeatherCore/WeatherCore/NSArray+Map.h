@@ -1,5 +1,5 @@
 //
-//  CloudObj.h
+//  NSArray+Map.h
 //  WeatherCore
 //
 //  Created by Nghia Tran on 8/4/17.
@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Decodable.h"
 
-@interface CloudObj : NSObject <Decodable>
+typedef id (^MapObjectBlock)(id obj);
 
-@property (strong, nonatomic, readonly) NSNumber *all;
+@interface NSArray (Map)
+
+- (NSArray *)mapObjectsUsingBlock:(MapObjectBlock)block;
 
 @end

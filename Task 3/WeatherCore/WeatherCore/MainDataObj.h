@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decodable.h"
 
-@interface MainDataObj : NSObject
+@interface MainDataObj : NSObject <Decodable>
+
+@property (strong, nonatomic, readonly) NSNumber *temp;
+@property (strong, nonatomic, readonly) NSNumber *pressure;
+@property (strong, nonatomic, readonly) NSNumber *humidity;
+@property (strong, nonatomic, readonly) NSNumber *temp_min;
+@property (strong, nonatomic, readonly) NSNumber *temp_max;
 
 @end

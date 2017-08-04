@@ -8,6 +8,18 @@
 
 #import "CloudObj.h"
 
+@interface CloudObj ()
+
+@property (strong, nonatomic) NSNumber *all;
+
+@end
+
 @implementation CloudObj
+
++(instancetype) decode:(NSDictionary *)json {
+    CloudObj *obj = [[CloudObj alloc] init];
+    obj.all = (NSNumber *) json[@"all"];
+    return obj;
+}
 
 @end

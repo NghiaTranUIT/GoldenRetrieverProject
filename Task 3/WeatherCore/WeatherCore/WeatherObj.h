@@ -7,7 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decodable.h"
 
-@interface WeatherObj : NSObject
+@class CoordinateObj;
+@class MainDataObj;
+@class MainDataObj;
+@class WindObj;
+@class CloudObj;
+@class SystemDataObj;
+@class WeatherDataObj;
+
+@interface WeatherObj : NSObject <Decodable>
+
+@property (strong, nonatomic, readonly) CoordinateObj *coordinate;
+@property (strong, nonatomic, readonly) NSArray<WeatherDataObj *> *weatherDatas;
+@property (strong, nonatomic, readonly) MainDataObj *mainData;
+@property (strong, nonatomic, readonly) WindObj *wind;
+@property (strong, nonatomic, readonly) CloudObj *cloud;
+@property (strong, nonatomic, readonly) SystemDataObj *systemData;
+
+@property (strong, nonatomic, readonly) NSNumber *ID;
+@property (copy, nonatomic, readonly) NSString *name;
+@property (strong, nonatomic, readonly) NSNumber *cod;
+@property (strong, nonatomic, readonly) NSNumber *dt;
+@property (copy, nonatomic, readonly) NSString *base;
 
 @end

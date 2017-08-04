@@ -8,6 +8,20 @@
 
 #import "WindObj.h"
 
+@interface WindObj()
+
+@property (strong, nonatomic) NSNumber *speed;
+@property (strong, nonatomic) NSNumber *deg;
+
+@end
+
 @implementation WindObj
+
++(instancetype) decode:(NSDictionary *)json {
+    WindObj *obj = [[WindObj alloc] init];
+    obj.speed = (NSNumber *) json[@"speed"];
+    obj.deg = (NSNumber *) json[@"deg"];
+    return obj;
+}
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Decodable.h"
 
-@interface CoordinateObj : NSObject
+@interface CoordinateObj : NSObject <Decodable>
+
+@property (strong, nonatomic, readonly) NSNumber *lon;
+@property (strong, nonatomic, readonly) NSNumber *lat;
 
 @end
