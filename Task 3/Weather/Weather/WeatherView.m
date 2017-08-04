@@ -8,14 +8,19 @@
 
 #import "WeatherView.h"
 
+@interface WeatherView ()
+
+@property (weak, nonatomic) IBOutlet UILabel *locationNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *dateTimeLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *bigIconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureLbl;
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
+@property (weak, nonatomic) IBOutlet UILabel *cityNameLbl;
+@property (weak, nonatomic) IBOutlet UIStackView *stackView;
+
+@end
+
 @implementation WeatherView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

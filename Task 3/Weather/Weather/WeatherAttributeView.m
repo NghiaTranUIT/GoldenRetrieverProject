@@ -8,14 +8,22 @@
 
 #import "WeatherAttributeView.h"
 
+@interface WeatherAttributeView ()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *valueLbl;
+
+@end
+
 @implementation WeatherAttributeView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void) configureCellWithData:(id<WeatherAttributeViewData>) data {
+
+    // Layout data
+    self.titleLbl.text = data.title;
+    self.valueLbl.text = data.value;
+    self.iconImageView.image = [UIImage imageNamed:data.iconName];
 }
-*/
 
 @end
