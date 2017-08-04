@@ -21,5 +21,6 @@
 #import "WeatherObj.h"
 #import "NSArray+Map.h"
 #import "LocationService.h"
+#import "Reachability.h"
 
 #endif /* PublicHeader_h */

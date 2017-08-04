@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E128AC1A8504164923E8F7A /* Pods_WeatherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B690AF3DAA2F9D0D7E082685 /* Pods_WeatherCore.framework */; };
+		BA1273251F34ECA7001BE595 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1273231F34ECA7001BE595 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA1273261F34ECA7001BE595 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1273241F34ECA7001BE595 /* Reachability.m */; };
 		BA3106E01F34BC4E009E4ABA /* BaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3106DE1F34BC4E009E4ABA /* BaseRequest.h */; };
 		BA3106E11F34BC4E009E4ABA /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3106DF1F34BC4E009E4ABA /* BaseRequest.m */; };
 		BA688F261F34781800E9239E /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F241F34781800E9239E /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +66,8 @@
 		58FDC00A9CF6017C1E338DD8 /* Pods-WeatherCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCore.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WeatherCore/Pods-WeatherCore.release.xcconfig"; sourceTree = "<group>"; };
 		8BADDE470A7E446E59094C92 /* Pods-WeatherCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherCore.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WeatherCore/Pods-WeatherCore.debug.xcconfig"; sourceTree = "<group>"; };
 		B690AF3DAA2F9D0D7E082685 /* Pods_WeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA1273231F34ECA7001BE595 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BA1273241F34ECA7001BE595 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		BA3106DE1F34BC4E009E4ABA /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
 		BA3106DF1F34BC4E009E4ABA /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
 		BA688F241F34781800E9239E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -137,11 +141,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA0ABD1F1F34CE4F004B0070 /* Location */ = {
+		BA1273221F34EC8D001BE595 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
+				BA1273231F34ECA7001BE595 /* Reachability.h */,
+				BA1273241F34ECA7001BE595 /* Reachability.m */,
 			);
-			name = Location;
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		BA3106DC1F34B2A4009E4ABA /* Header */ = {
@@ -166,6 +172,7 @@
 		BA688F201F34780000E9239E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BA1273221F34EC8D001BE595 /* Reachability */,
 				BA92C01C1F349569002BA1E8 /* Open Weather Service */,
 				BA92C01B1F349560002BA1E8 /* Extensions */,
 				BA688F681F347E1600E9239E /* Json Mapper */,
@@ -333,7 +340,6 @@
 		BA92C01F1F34959B002BA1E8 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				BA0ABD1F1F34CE4F004B0070 /* Location */,
 				BA92C0201F3495A2002BA1E8 /* Weather */,
 			);
 			name = "View Model";
@@ -370,6 +376,7 @@
 				BA688F581F347D7800E9239E /* LocationService.h in Headers */,
 				BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */,
 				BA688F6A1F347E5800E9239E /* Decodable.h in Headers */,
+				BA1273251F34ECA7001BE595 /* Reachability.h in Headers */,
 				BA688F3A1F347A7000E9239E /* WeatherObj.h in Headers */,
 				BA688F521F347CF100E9239E /* WeatherDataObj.h in Headers */,
 				BA688F4A1F347CA100E9239E /* CloudObj.h in Headers */,
@@ -540,6 +547,7 @@
 				BA688F4F1F347CAE00E9239E /* SystemDataObj.m in Sources */,
 				BA92C0101F348BBC002BA1E8 /* OpenWeatherService.m in Sources */,
 				BA92C01A1F3492CE002BA1E8 /* OpenWeatherConfiguration.m in Sources */,
+				BA1273261F34ECA7001BE595 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

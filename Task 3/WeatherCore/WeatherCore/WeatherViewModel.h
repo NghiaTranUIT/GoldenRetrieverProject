@@ -15,10 +15,6 @@
 
 @interface WeatherViewModel : NSObject
 
--(CLAuthorizationStatus) authorizationStatus;
-
--(BOOL) locationServicesEnabled;
-
 -(void) requestCurrentLocation:(LocationBlock) locationBlock errorBlock:(ErrorBlock) errorBlock;
 
 -(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location

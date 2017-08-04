@@ -10,6 +10,7 @@
 		B582CD45B6270AB6650796AB /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF98449402C8F497CEAA0A8 /* Pods_Weather.framework */; };
 		BA0ABD271F34D002004B0070 /* LocationWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0ABD261F34D002004B0070 /* LocationWarningView.m */; };
 		BA0ABD291F34D00C004B0070 /* LocationWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA0ABD281F34D00C004B0070 /* LocationWarningView.xib */; };
+		BA1273211F34EB09001BE595 /* UIAlertController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1273201F34EB09001BE595 /* UIAlertController+Helper.m */; };
 		BA688F311F34785A00E9239E /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F2F1F34785A00E9239E /* WeatherViewController.m */; };
 		BA688F321F34785A00E9239E /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA688F301F34785A00E9239E /* WeatherViewController.xib */; };
 		BA688F361F34789500E9239E /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F351F34789500E9239E /* Router.m */; };
@@ -52,6 +53,8 @@
 		BA0ABD251F34D002004B0070 /* LocationWarningView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationWarningView.h; sourceTree = "<group>"; };
 		BA0ABD261F34D002004B0070 /* LocationWarningView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationWarningView.m; sourceTree = "<group>"; };
 		BA0ABD281F34D00C004B0070 /* LocationWarningView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationWarningView.xib; sourceTree = "<group>"; };
+		BA12731F1F34EB09001BE595 /* UIAlertController+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Helper.h"; sourceTree = "<group>"; };
+		BA1273201F34EB09001BE595 /* UIAlertController+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Helper.m"; sourceTree = "<group>"; };
 		BA3106E31F34BFF3009E4ABA /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/WeatherWorkspace-hihyhgxujatihbeutvrgbmsnzlaf/Build/Products/Debug-iphonesimulator/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		BA688F2E1F34785A00E9239E /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		BA688F2F1F34785A00E9239E /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 			children = (
 				BA7E22271F34C88000C18D9A /* NSView+Constraint.h */,
 				BA7E22281F34C88000C18D9A /* NSView+Constraint.m */,
+				BA12731F1F34EB09001BE595 /* UIAlertController+Helper.h */,
+				BA1273201F34EB09001BE595 /* UIAlertController+Helper.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				BA688F311F34785A00E9239E /* WeatherViewController.m in Sources */,
 				BA7E22291F34C88000C18D9A /* NSView+Constraint.m in Sources */,
 				BA8B82CD1F3473670047E635 /* AppDelegate.m in Sources */,
+				BA1273211F34EB09001BE595 /* UIAlertController+Helper.m in Sources */,
 				BA8B82CA1F3473670047E635 /* main.m in Sources */,
 				BA92C03B1F349B77002BA1E8 /* WeatherAttributeView.m in Sources */,
 			);

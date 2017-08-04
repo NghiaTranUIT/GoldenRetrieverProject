@@ -36,18 +36,16 @@
     return [LocationService authorizationStatus];
 }
 
--(BOOL) locationServicesEnabled {
-    return [LocationService locationServicesEnabled];
-}
-
 -(void)requestCurrentLocation:(LocationBlock)locationBlock errorBlock:(ErrorBlock)errorBlock {
 
     CLAuthorizationStatus state = [self authorizationStatus];
 
     switch (state) {
         case kCLAuthorizationStatusNotDetermined: {
+            __weak typeof(self) weakSelf = self;
             [self.locationService requestWhenInUseAuthorization:^{
-                [self.locationService fetchLocation:locationBlock errorBlock:errorBlock];
+                typeof(self) strongSelf = weakSelf;
+                [strongSelf.locationService fetchLocation:locationBlock errorBlock:errorBlock];
             }];
             break;
         }

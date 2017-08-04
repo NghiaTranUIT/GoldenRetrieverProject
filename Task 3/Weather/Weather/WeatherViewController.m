@@ -6,10 +6,12 @@
 //  Copyright © 2017 Nghia Tran. All rights reserved.
 //
 
-#import "WeatherViewController.h"
 #import <WeatherCore/WeatherCore.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "WeatherViewController.h"
 #import "WeatherView.h"
 #import "LocationWarningView.h"
+#import "UIAlertController+Helper.h"
 
 @interface WeatherViewController ()
 
@@ -66,20 +68,27 @@
         typeof(self) strongSelf = weakSelf;
 
         // Show
-        [strongSelf.warningView  fadeInWarning:strongSelf.view];
+        [strongSelf.warningView fadeInWarning:strongSelf.view];
     }];
 }
 
 -(void) fetchWeatherAPI:(CLLocation *) location {
 
+    // Loader
+    [SVProgressHUD show];
+
     __weak typeof(self) weakSelf = self;
     [self.viewModel fetchWeatherAtLocation:location.coordinate completion:^(WeatherObj * _Nullable weather) {
         typeof(self) strongSelf = weakSelf;
 
+        // Dismiss
+        [SVProgressHUD dismiss];
+
         // Update data
         [strongSelf.weatherView configureViewWithData:weather];
     } error:^(NSError * _Nullable error) {
-
+        typeof(self) strongSelf = weakSelf;
+        [UIAlertController presentAlertControllerWithMessage:@"Something went wrong" rootController:strongSelf];
     }];
 }
 
