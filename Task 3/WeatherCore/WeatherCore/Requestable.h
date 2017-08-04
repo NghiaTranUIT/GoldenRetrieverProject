@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Parammeter.h"
 
 @protocol Requestable <NSObject>
+
+-(instancetype) initWithParam:(id<Parammeter>) param;
+
+@property (copy, readonly) NSString *path;
+
+-(NSURLRequest *) buildRequest;
 
 @end

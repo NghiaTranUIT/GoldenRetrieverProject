@@ -28,11 +28,11 @@
 
 -(void) executeRequest:(id<Requestable>) request {
 
-//    NSURLRequest *urlRequest = [request buildRequest];
-//    self.session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//
-//
-//    }
+    NSURLRequest *urlRequest = [request buildRequest];
+    [self.session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+
+
+    }];
 }
 
 @end

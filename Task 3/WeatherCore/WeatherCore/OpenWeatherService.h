@@ -11,13 +11,19 @@
 
 @class WeatherObj;
 @class NetworkService;
+@class OpenWeatherConfiguration;
 
 typedef id (^WeatherCompletionBlock)(WeatherObj *weather);
 
 @interface OpenWeatherService : NSObject
 
+// Init
+-(instancetype) initWithNetworkService:(NetworkService *) service
+                         configuration:(OpenWeatherConfiguration *) configuration;
 -(instancetype) initWithNetworkService:(NetworkService *) service;
 
--(void) fetchWeatherAtLocation:(CLLocationCoordinate2D *) location completion:(WeatherCompletionBlock) block;
+// Fetch
+-(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
+                    completion:(WeatherCompletionBlock) block;
 
 @end
