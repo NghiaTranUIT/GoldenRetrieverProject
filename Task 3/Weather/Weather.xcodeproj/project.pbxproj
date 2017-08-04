@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA688F311F34785A00E9239E /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F2F1F34785A00E9239E /* WeatherViewController.m */; };
+		BA688F321F34785A00E9239E /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA688F301F34785A00E9239E /* WeatherViewController.xib */; };
+		BA688F361F34789500E9239E /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F351F34789500E9239E /* Router.m */; };
 		BA8B82CA1F3473670047E635 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B82C91F3473670047E635 /* main.m */; };
 		BA8B82CD1F3473670047E635 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B82CC1F3473670047E635 /* AppDelegate.m */; };
-		BA8B82D01F3473670047E635 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B82CF1F3473670047E635 /* ViewController.m */; };
-		BA8B82D31F3473670047E635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8B82D11F3473670047E635 /* Main.storyboard */; };
 		BA8B82D51F3473670047E635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8B82D41F3473670047E635 /* Assets.xcassets */; };
 		BA8B82D81F3473670047E635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8B82D61F3473670047E635 /* LaunchScreen.storyboard */; };
 		BA8B82E31F3473670047E635 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B82E21F3473670047E635 /* WeatherTests.m */; };
@@ -28,13 +29,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA688F2E1F34785A00E9239E /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		BA688F2F1F34785A00E9239E /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		BA688F301F34785A00E9239E /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		BA688F341F34789500E9239E /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		BA688F351F34789500E9239E /* Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Router.m; sourceTree = "<group>"; };
 		BA8B82C51F3473670047E635 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8B82C91F3473670047E635 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA8B82CB1F3473670047E635 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA8B82CC1F3473670047E635 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA8B82CE1F3473670047E635 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BA8B82CF1F3473670047E635 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BA8B82D21F3473670047E635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA8B82D41F3473670047E635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA8B82D71F3473670047E635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA8B82D91F3473670047E635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +66,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA688F281F34782300E9239E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F331F34788A00E9239E /* Model */,
+				BA688F2D1F34784600E9239E /* Controllers */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		BA688F291F34782900E9239E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F2B1F34783700E9239E /* Other */,
+				BA688F2A1F34782F00E9239E /* Xib */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		BA688F2A1F34782F00E9239E /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				BA8B82D61F3473670047E635 /* LaunchScreen.storyboard */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		BA688F2B1F34783700E9239E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BA8B82D41F3473670047E635 /* Assets.xcassets */,
+				BA8B82D91F3473670047E635 /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		BA688F2C1F34783F00E9239E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BA8B82CB1F3473670047E635 /* AppDelegate.h */,
+				BA8B82CC1F3473670047E635 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		BA688F2D1F34784600E9239E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F2E1F34785A00E9239E /* WeatherViewController.h */,
+				BA688F2F1F34785A00E9239E /* WeatherViewController.m */,
+				BA688F301F34785A00E9239E /* WeatherViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BA688F331F34788A00E9239E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F371F3478A100E9239E /* Router */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA688F371F3478A100E9239E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F341F34789500E9239E /* Router.h */,
+				BA688F351F34789500E9239E /* Router.m */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		BA8B82BC1F3473670047E635 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +159,9 @@
 		BA8B82C71F3473670047E635 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				BA8B82CB1F3473670047E635 /* AppDelegate.h */,
-				BA8B82CC1F3473670047E635 /* AppDelegate.m */,
-				BA8B82CE1F3473670047E635 /* ViewController.h */,
-				BA8B82CF1F3473670047E635 /* ViewController.m */,
-				BA8B82D11F3473670047E635 /* Main.storyboard */,
-				BA8B82D41F3473670047E635 /* Assets.xcassets */,
-				BA8B82D61F3473670047E635 /* LaunchScreen.storyboard */,
-				BA8B82D91F3473670047E635 /* Info.plist */,
+				BA688F2C1F34783F00E9239E /* App Delegate */,
+				BA688F291F34782900E9239E /* Resource */,
+				BA688F281F34782300E9239E /* Source */,
 				BA8B82C81F3473670047E635 /* Supporting Files */,
 			);
 			path = Weather;
@@ -208,8 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA8B82D81F3473670047E635 /* LaunchScreen.storyboard in Resources */,
+				BA688F321F34785A00E9239E /* WeatherViewController.xib in Resources */,
 				BA8B82D51F3473670047E635 /* Assets.xcassets in Resources */,
-				BA8B82D31F3473670047E635 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8B82D01F3473670047E635 /* ViewController.m in Sources */,
+				BA688F361F34789500E9239E /* Router.m in Sources */,
+				BA688F311F34785A00E9239E /* WeatherViewController.m in Sources */,
 				BA8B82CD1F3473670047E635 /* AppDelegate.m in Sources */,
 				BA8B82CA1F3473670047E635 /* main.m in Sources */,
 			);
@@ -252,14 +322,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA8B82D11F3473670047E635 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA8B82D21F3473670047E635 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA8B82D61F3473670047E635 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA688F261F34781800E9239E /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F241F34781800E9239E /* Constants.h */; };
+		BA688F271F34781800E9239E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F251F34781800E9239E /* Constants.m */; };
+		BA688F3A1F347A7000E9239E /* WeatherObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F381F347A7000E9239E /* WeatherObj.h */; };
+		BA688F3B1F347A7000E9239E /* WeatherObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F391F347A7000E9239E /* WeatherObj.m */; };
+		BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F3C1F347C5800E9239E /* CoordinateObj.h */; };
+		BA688F3F1F347C5800E9239E /* CoordinateObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F3D1F347C5800E9239E /* CoordinateObj.m */; };
+		BA688F421F347C8500E9239E /* MainDataObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F401F347C8500E9239E /* MainDataObj.h */; };
+		BA688F431F347C8500E9239E /* MainDataObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F411F347C8500E9239E /* MainDataObj.m */; };
+		BA688F461F347C9100E9239E /* WindObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F441F347C9100E9239E /* WindObj.h */; };
+		BA688F471F347C9100E9239E /* WindObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F451F347C9100E9239E /* WindObj.m */; };
+		BA688F4A1F347CA100E9239E /* CloudObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F481F347CA100E9239E /* CloudObj.h */; };
+		BA688F4B1F347CA100E9239E /* CloudObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F491F347CA100E9239E /* CloudObj.m */; };
+		BA688F4E1F347CAE00E9239E /* SystemDataObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F4C1F347CAE00E9239E /* SystemDataObj.h */; };
+		BA688F4F1F347CAE00E9239E /* SystemDataObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F4D1F347CAE00E9239E /* SystemDataObj.m */; };
+		BA688F521F347CF100E9239E /* WeatherDataObj.h in Headers */ = {isa = PBXBuildFile; fileRef = BA688F501F347CF100E9239E /* WeatherDataObj.h */; };
+		BA688F531F347CF100E9239E /* WeatherDataObj.m in Sources */ = {isa = PBXBuildFile; fileRef = BA688F511F347CF100E9239E /* WeatherDataObj.m */; };
 		BA8B832E1F3475BD0047E635 /* WeatherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B83241F3475BD0047E635 /* WeatherCore.framework */; };
 		BA8B83331F3475BD0047E635 /* WeatherCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B83321F3475BD0047E635 /* WeatherCoreTests.m */; };
 		BA8B83351F3475BD0047E635 /* WeatherCore.h in Headers */ = {isa = PBXBuildFile; fileRef = BA8B83271F3475BD0047E635 /* WeatherCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +39,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA688F241F34781800E9239E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BA688F251F34781800E9239E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BA688F381F347A7000E9239E /* WeatherObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherObj.h; sourceTree = "<group>"; };
+		BA688F391F347A7000E9239E /* WeatherObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherObj.m; sourceTree = "<group>"; };
+		BA688F3C1F347C5800E9239E /* CoordinateObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateObj.h; sourceTree = "<group>"; };
+		BA688F3D1F347C5800E9239E /* CoordinateObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateObj.m; sourceTree = "<group>"; };
+		BA688F401F347C8500E9239E /* MainDataObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDataObj.h; sourceTree = "<group>"; };
+		BA688F411F347C8500E9239E /* MainDataObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDataObj.m; sourceTree = "<group>"; };
+		BA688F441F347C9100E9239E /* WindObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindObj.h; sourceTree = "<group>"; };
+		BA688F451F347C9100E9239E /* WindObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindObj.m; sourceTree = "<group>"; };
+		BA688F481F347CA100E9239E /* CloudObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudObj.h; sourceTree = "<group>"; };
+		BA688F491F347CA100E9239E /* CloudObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudObj.m; sourceTree = "<group>"; };
+		BA688F4C1F347CAE00E9239E /* SystemDataObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDataObj.h; sourceTree = "<group>"; };
+		BA688F4D1F347CAE00E9239E /* SystemDataObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDataObj.m; sourceTree = "<group>"; };
+		BA688F501F347CF100E9239E /* WeatherDataObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherDataObj.h; sourceTree = "<group>"; };
+		BA688F511F347CF100E9239E /* WeatherDataObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherDataObj.m; sourceTree = "<group>"; };
 		BA8B83241F3475BD0047E635 /* WeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8B83271F3475BD0047E635 /* WeatherCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCore.h; sourceTree = "<group>"; };
 		BA8B83281F3475BD0047E635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +82,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA688F201F34780000E9239E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F231F34780E00E9239E /* New Group */,
+				BA688F221F34780800E9239E /* Network */,
+				BA688F211F34780400E9239E /* Model */,
+				BA688F241F34781800E9239E /* Constants.h */,
+				BA688F251F34781800E9239E /* Constants.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		BA688F211F34780400E9239E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA688F381F347A7000E9239E /* WeatherObj.h */,
+				BA688F391F347A7000E9239E /* WeatherObj.m */,
+				BA688F3C1F347C5800E9239E /* CoordinateObj.h */,
+				BA688F3D1F347C5800E9239E /* CoordinateObj.m */,
+				BA688F401F347C8500E9239E /* MainDataObj.h */,
+				BA688F411F347C8500E9239E /* MainDataObj.m */,
+				BA688F441F347C9100E9239E /* WindObj.h */,
+				BA688F451F347C9100E9239E /* WindObj.m */,
+				BA688F481F347CA100E9239E /* CloudObj.h */,
+				BA688F491F347CA100E9239E /* CloudObj.m */,
+				BA688F4C1F347CAE00E9239E /* SystemDataObj.h */,
+				BA688F4D1F347CAE00E9239E /* SystemDataObj.m */,
+				BA688F501F347CF100E9239E /* WeatherDataObj.h */,
+				BA688F511F347CF100E9239E /* WeatherDataObj.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA688F221F34780800E9239E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		BA688F231F34780E00E9239E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		BA8B831A1F3475BD0047E635 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +150,7 @@
 		BA8B83261F3475BD0047E635 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
+				BA688F201F34780000E9239E /* Source */,
 				BA8B83271F3475BD0047E635 /* WeatherCore.h */,
 				BA8B83281F3475BD0047E635 /* Info.plist */,
 			);
@@ -93,7 +173,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA688F461F347C9100E9239E /* WindObj.h in Headers */,
+				BA688F421F347C8500E9239E /* MainDataObj.h in Headers */,
+				BA688F4A1F347CA100E9239E /* CloudObj.h in Headers */,
+				BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */,
+				BA688F3A1F347A7000E9239E /* WeatherObj.h in Headers */,
+				BA688F521F347CF100E9239E /* WeatherDataObj.h in Headers */,
+				BA688F261F34781800E9239E /* Constants.h in Headers */,
 				BA8B83351F3475BD0047E635 /* WeatherCore.h in Headers */,
+				BA688F4E1F347CAE00E9239E /* SystemDataObj.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA688F531F347CF100E9239E /* WeatherDataObj.m in Sources */,
+				BA688F3F1F347C5800E9239E /* CoordinateObj.m in Sources */,
+				BA688F471F347C9100E9239E /* WindObj.m in Sources */,
+				BA688F3B1F347A7000E9239E /* WeatherObj.m in Sources */,
+				BA688F431F347C8500E9239E /* MainDataObj.m in Sources */,
+				BA688F271F34781800E9239E /* Constants.m in Sources */,
+				BA688F4B1F347CA100E9239E /* CloudObj.m in Sources */,
+				BA688F4F1F347CAE00E9239E /* SystemDataObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
