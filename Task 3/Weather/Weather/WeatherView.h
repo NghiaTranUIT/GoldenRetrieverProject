@@ -11,6 +11,8 @@
 
 @interface WeatherView : UIView
 
+-(void) setupView:(UIView *) parentView;
+
 -(void) configureViewWithData:(id<WeatherViewDataSource>) data;
 
 @end

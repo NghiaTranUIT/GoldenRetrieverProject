@@ -8,6 +8,7 @@
 
 #import "WeatherView.h"
 #import "WeatherAttributeView.h"
+#import "NSView+Constraint.h"
 
 @interface WeatherView ()
 
@@ -53,6 +54,16 @@
     for (WeatherAttributeView *view in attributeViews) {
         [self.stackView addArrangedSubview:view];
     }
+}
+
+-(void) setupView:(UIView *)parentView {
+
+    // Add
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    [parentView addSubview:self];
+
+    // Edge
+    [self edgeToParentView:parentView];
 }
 
 @end

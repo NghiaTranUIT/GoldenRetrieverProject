@@ -24,6 +24,9 @@
 
     self.viewModel = [[WeatherViewModel alloc] init];
 
+    // Layout
+    [self setupSubView];
+
     // Fetch
     [self fetchWeatherAPI];
 }
@@ -50,6 +53,10 @@
 
 -(void) initCommon {
 
+}
+
+-(void) setupSubView {
+    [self.weatherView setupView:self.view];
 }
 
 -(WeatherView *) lazyWeatherView {
