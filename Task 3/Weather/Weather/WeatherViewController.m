@@ -9,11 +9,13 @@
 #import "WeatherViewController.h"
 #import <WeatherCore/WeatherCore.h>
 #import "WeatherView.h"
+#import "LocationWarningView.h"
 
 @interface WeatherViewController ()
 
 @property (strong, nonatomic) WeatherViewModel *viewModel;
 @property (strong, nonatomic) WeatherView *weatherView;
+@property (strong, nonatomic) LocationWarningView *warningView;
 
 @end
 
@@ -24,21 +26,54 @@
 
     self.viewModel = [[WeatherViewModel alloc] init];
 
+    // Notification
+    [self addNotification];
+    
     // Layout
     [self setupSubView];
 
     // Fetch
-    [self fetchWeatherAPI];
+    [self requestCurrentLocation];
 }
 
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Notification
+-(void) addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterBackground) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+-(void) willEnterBackground {
+    [self requestCurrentLocation];
+}
 
 #pragma mark - API
--(void) fetchWeatherAPI {
-
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(10.762622, 106.660172);
+-(void) requestCurrentLocation {
 
     __weak typeof(self) weakSelf = self;
-    [self.viewModel fetchWeatherAtLocation:location completion:^(WeatherObj * _Nullable weather) {
+    [self.viewModel requestCurrentLocation:^(CLLocation *location) {
+        typeof(self) strongSelf = weakSelf;
+
+        // Hide if need
+        [strongSelf.warningView fadeOut];
+        
+        // Fetch Weather
+        [strongSelf fetchWeatherAPI:location];
+
+    } errorBlock:^(NSError * _Nullable error) {
+        typeof(self) strongSelf = weakSelf;
+
+        // Show
+        [strongSelf.warningView  fadeInWarning:strongSelf.view];
+    }];
+}
+
+-(void) fetchWeatherAPI:(CLLocation *) location {
+
+    __weak typeof(self) weakSelf = self;
+    [self.viewModel fetchWeatherAtLocation:location.coordinate completion:^(WeatherObj * _Nullable weather) {
         typeof(self) strongSelf = weakSelf;
 
         // Update data
@@ -64,6 +99,11 @@
     return view;
 }
 
+-(LocationWarningView *) lazyWarningView {
+    LocationWarningView *view = [[NSBundle mainBundle] loadNibNamed:@"LocationWarningView" owner:nil options:nil].firstObject;
+    return view;
+}
+
 #pragma mark - Getter
 
 -(WeatherView *)weatherView {
@@ -75,4 +115,11 @@
     return _weatherView;
 }
 
+-(LocationWarningView *)warningView {
+    if (_warningView == nil) {
+        _warningView = [self lazyWarningView];
+    }
+
+    return _warningView;
+}
 @end

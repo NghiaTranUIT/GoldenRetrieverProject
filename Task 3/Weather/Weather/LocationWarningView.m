@@ -7,15 +7,61 @@
 //
 
 #import "LocationWarningView.h"
+#import "NSView+Constraint.h"
+
+static CGFloat Animation_Duration = 0.3;
+
+@interface LocationWarningView()
+
+@property (strong, nonatomic) NSNumber *isShowing;
+
+@end
 
 @implementation LocationWarningView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)awakeFromNib {
+    [super awakeFromNib];
+
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    self.isShowing = @NO;
 }
-*/
+
+-(IBAction) openSetting {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+}
+
+-(void) fadeInWarning:(UIView *) parentView {
+
+    if (self.isShowing.boolValue == YES) {
+        return;
+    }
+
+    self.isShowing = @YES;
+    [parentView addSubview:self];
+    [self edgeToParentView:parentView];
+
+    // Animate
+    [UIView animateWithDuration:Animation_Duration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+
+    } completion:^(BOOL finished) {
+
+    }];
+}
+
+-(void) fadeOut {
+
+    if (self.isShowing.boolValue == NO) {
+        return;
+    }
+
+    self.isShowing = @YES;
+
+    // Animate
+    [UIView animateWithDuration:Animation_Duration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
 
 @end

@@ -12,6 +12,7 @@
 
 // Location
 typedef void (^LocationBlock)(CLLocation *);
+typedef void (^LocationPermissionSuccess)();
 
 @interface LocationService : NSObject
 
@@ -20,6 +21,7 @@ typedef void (^LocationBlock)(CLLocation *);
 +(CLAuthorizationStatus) authorizationStatus;
 +(BOOL) locationServicesEnabled;
 
+-(void) requestWhenInUseAuthorization:(LocationPermissionSuccess) block;
 -(void) fetchLocation:(LocationBlock) block errorBlock:(ErrorBlock) error;
 
 @end

@@ -10,4 +10,7 @@
 
 @interface LocationWarningView : UIView
 
+-(void) fadeInWarning:(UIView *) parentView;
+
+-(void) fadeOut;
 @end

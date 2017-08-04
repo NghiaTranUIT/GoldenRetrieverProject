@@ -12,6 +12,7 @@
 
 @property (copy, nonatomic) LocationBlock locationBlock;
 @property (copy, nonatomic) ErrorBlock errorBlock;
+@property (copy, nonatomic) LocationPermissionSuccess successBlock;
 
 @property (strong, nonatomic) CLLocationManager *manager;
 
@@ -43,8 +44,13 @@
     return [CLLocationManager authorizationStatus];
 }
 
-+(BOOL)locationServicesEnabled {
++(BOOL) locationServicesEnabled {
     return [CLLocationManager locationServicesEnabled];
+}
+
+-(void) requestWhenInUseAuthorization:(LocationPermissionSuccess)block {
+    self.successBlock = [block copy];
+    [self.manager requestWhenInUseAuthorization];
 }
 
 -(void) fetchLocation:(LocationBlock) block errorBlock:(ErrorBlock)error {
@@ -68,6 +74,22 @@
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     if (self.errorBlock) {
         self.errorBlock(error);
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+
+    switch (status) {
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            if (self.successBlock) {
+                self.successBlock();
+            }
+            break;
+
+        default:
+            if (self.errorBlock) {
+                self.errorBlock(nil);
+            }
     }
 }
 
