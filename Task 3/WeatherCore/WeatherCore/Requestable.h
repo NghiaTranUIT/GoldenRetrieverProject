@@ -19,9 +19,15 @@ typedef enum : NSUInteger {
 
 @property (copy, readonly) NSString *path;
 @property (assign, readonly) HTTPMethod httpMethod;
+@property (copy, readonly) NSString *baseURL;
 
 -(instancetype) initWithParam:(id<Parammeter>) param;
 
+-(id) decodeObject:(id) response;
+
 -(NSURLRequest *) buildRequest;
+
+-(void) handleCompletion:(id) responseObject;
+-(void) handleError:(NSError *) error;
 
 @end

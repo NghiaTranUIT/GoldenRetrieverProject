@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Constants.h"
 
 @class WeatherObj;
 
 @interface WeatherViewModel : NSObject
 
 -(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
-                    completion:(void (^)(WeatherObj *weather)) block;
+                    completion:(WeatherCompletionBlock) success
+                         error:(ErrorBlock) error;
 
 @end

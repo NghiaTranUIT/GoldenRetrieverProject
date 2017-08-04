@@ -35,11 +35,13 @@
     CLLocationCoordinate2D location = CLLocationCoordinate2DMake(10.762622, 106.660172);
 
     __weak typeof(self) weakSelf = self;
-    [self.viewModel fetchWeatherAtLocation:location completion:^void(WeatherObj *weather) {
+    [self.viewModel fetchWeatherAtLocation:location completion:^(WeatherObj * _Nullable weather) {
         typeof(self) strongSelf = weakSelf;
 
         // Update data
         [strongSelf.weatherView configureViewWithData:weather];
+    } error:^(NSError * _Nullable error) {
+
     }];
 }
 

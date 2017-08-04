@@ -44,14 +44,15 @@
 
 #pragma mark - Fetch Weather
 
--(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) block {
+-(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) success error:(ErrorBlock) error {
 
     // Param
     FetchWeatherRequestParam *param = [[FetchWeatherRequestParam alloc] initWithLocation:location appID:self.configuration.appID];
 
     // Request
     FetchWeatherRequest *request = [[FetchWeatherRequest alloc] initWithParam:param];
-
+    request.completionBlock = [success copy];
+    request.errorBlock = [error copy];
     // Execute
     [self.networkService executeRequest:request];
 }

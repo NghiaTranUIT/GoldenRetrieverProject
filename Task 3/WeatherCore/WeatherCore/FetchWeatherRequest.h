@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Requestable.h"
+#import "BaseRequest.h"
 
-@interface FetchWeatherRequest : NSObject <Requestable>
+@interface FetchWeatherRequest : BaseRequest
 
 @end

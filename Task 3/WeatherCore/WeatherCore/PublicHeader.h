@@ -9,6 +9,7 @@
 #ifndef PublicHeader_h
 #define PublicHeader_h
 
+#import "Constants.h"
 #import "WeatherViewModel.h"
 #import "Decodable.h"
 #import "CoordinateObj.h"
@@ -19,5 +20,6 @@
 #import "WeatherDataObj.h"
 #import "WeatherObj.h"
 #import "NSArray+Map.h"
+
 
 #endif /* PublicHeader_h */

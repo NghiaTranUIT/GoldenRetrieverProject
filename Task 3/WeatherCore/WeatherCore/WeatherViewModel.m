@@ -30,9 +30,10 @@
 }
 
 -(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
-                    completion:(void (^)(WeatherObj *weather)) block {
+                    completion:(WeatherCompletionBlock) success
+                         error:(ErrorBlock) error {
 
-    [self.weatherService fetchWeatherAtLocation:location completion:block];
+    [self.weatherService fetchWeatherAtLocation:location completion:success error:error];
 }
 
 @end

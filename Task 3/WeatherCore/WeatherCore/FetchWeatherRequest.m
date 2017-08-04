@@ -7,37 +7,28 @@
 //
 
 #import "FetchWeatherRequest.h"
-
-@interface FetchWeatherRequest ()
-
-@property (strong, nonatomic) id<Parammeter> param;
-
-@end
+#import "Constants.h"
+#import "WeatherObj.h"
 
 @implementation FetchWeatherRequest
-
--(instancetype) initWithParam:(id<Parammeter>)param {
-    self = [super init];
-
-    if (self) {
-        self.param = param;
-    }
-
-    return self;
-}
 
 -(HTTPMethod) httpMethod {
     return HTTPMethodGET;
 }
 
 -(NSString *) path {
-    return @"/data/2.5/weather";
+    return k_API_WEATHER;
 }
 
--(NSURLRequest *)buildRequest {
-    NSURL *url = [NSURL URLWithString:[self path]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    return request;
+-(id) decodeObject:(id)response {
+
+    // Check nil
+    if (response == nil) {
+        return nil;
+    }
+
+    // Decode
+    return [WeatherObj decode:response];
 }
 
 @end

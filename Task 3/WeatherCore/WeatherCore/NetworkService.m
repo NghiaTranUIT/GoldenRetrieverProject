@@ -7,12 +7,13 @@
 //
 
 #import "NetworkService.h"
+#import <AFNetworking/AFNetworking.h>
 
 static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.background";
 
 @interface NetworkService() <NSURLSessionDelegate>
 
-@property (strong, nonatomic) NSURLSession *session;
+@property (strong, nonatomic) AFURLSessionManager *session;
 
 @end
 
@@ -24,12 +25,12 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
     if (self) {
 
         // Default URLSession
-        self.session = [self defaultURLSession];
+        self.session = [self defaultManager];
     }
 
     return self;
 }
--(instancetype) initWithURLSession:(NSURLSession *)session {
+-(instancetype) initWithURLSession:(AFURLSessionManager *)session {
     self = [super init];
 
     if (self) {
@@ -39,11 +40,10 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
     return self;
 }
 
--(NSURLSession *) defaultURLSession {
-    NSOperationQueue *defaultBackgroundQueue = [self backgroundQueue];
-    NSURLSessionConfiguration *defaultConfiguration = [self defaultConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:self delegateQueue:defaultBackgroundQueue];
-    return session;
+-(AFURLSessionManager *) defaultManager {
+    NSURLSessionConfiguration *configuration = [self defaultConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    return manager;
 }
 
 -(NSURLSessionConfiguration *) defaultConfiguration {
@@ -53,23 +53,21 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
     return configure;
 }
 
--(NSOperationQueue *) backgroundQueue {
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    queue.name = k_Queue_Background_Name;
-    queue.qualityOfService = NSQualityOfServiceBackground;
-    queue.maxConcurrentOperationCount = 25;
-    return queue;
-}
-
-
 -(void) executeRequest:(id<Requestable>) request {
 
     NSURLRequest *urlRequest = [request buildRequest];
-    [self.session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
-        NSLog(@"%@", data);
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
 
+        if (error) {
+            [request handleError:error];
+            return ;
+        }
+
+        // Success
+        [request handleCompletion: responseObject];
     }];
+    [dataTask resume];
 }
 
 @end

@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Constants.h"
 
 @class WeatherObj;
 @class NetworkService;
 @class OpenWeatherConfiguration;
-
-typedef void (^WeatherCompletionBlock)(WeatherObj *weather);
 
 @interface OpenWeatherService : NSObject
 
@@ -23,7 +22,6 @@ typedef void (^WeatherCompletionBlock)(WeatherObj *weather);
 -(instancetype) initWithNetworkService:(NetworkService *) service;
 
 // Fetch
--(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location
-                    completion:(WeatherCompletionBlock) block;
+-(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) success error:(ErrorBlock) error;
 
 @end
