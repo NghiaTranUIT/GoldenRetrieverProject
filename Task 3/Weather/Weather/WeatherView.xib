@@ -41,7 +41,7 @@
                     <color key="textColor" red="0.28231829400000003" green="0.28237283229999999" blue="0.28231483699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-Mn-5IN">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1p-Mn-5IN">
                     <rect key="frame" x="76" y="158" width="224" height="224"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="224" id="88H-Yq-xpC"/>

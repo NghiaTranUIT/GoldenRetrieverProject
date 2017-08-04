@@ -28,4 +28,41 @@
     return obj;
 }
 
+-(WeatherType) weatherType {
+
+    // Getname
+    NSString *name = self.main.lowercaseString;
+
+    // Guard
+    if (name == nil) {
+        return WeatherTypeNice;
+    }
+
+    if ([name isEqualToString:@"clouds"]) {
+        return WeatherTypeNice;
+    }
+
+    if ([name isEqualToString:@"snowy"]) {
+        return WeatherTypeSnowy;
+    }
+
+    if ([name isEqualToString:@"storm"]) {
+        return WeatherTypeStorm;
+    }
+
+    return WeatherTypeNice;
+}
+
+-(NSString *) iconWeatherName {
+    switch (self.weatherType) {
+        case WeatherTypeStorm:
+            return @"icon_storm";
+        case WeatherTypeSnowy:
+            return @"icon_snowy";
+        case WeatherTypeRainy:
+            return @"icon_rainy";
+        case WeatherTypeNice:
+            return @"icon_normal";
+    }
+}
 @end

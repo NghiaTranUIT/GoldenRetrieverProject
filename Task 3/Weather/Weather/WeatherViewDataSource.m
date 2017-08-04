@@ -19,7 +19,8 @@
 }
 
 -(NSString *)bigIconImageName {
-    return @"icon";
+    WeatherDataObj *obj = self.weatherDatas.firstObject;
+    return [obj iconWeatherName];
 }
 
 -(NSString *)temperature {

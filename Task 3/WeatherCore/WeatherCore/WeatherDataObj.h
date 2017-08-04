@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "Decodable.h"
 
+typedef enum : NSUInteger {
+    WeatherTypeSnowy = 0,
+    WeatherTypeStorm,
+    WeatherTypeRainy,
+    WeatherTypeNice,
+} WeatherType;
+
 @interface WeatherDataObj : NSObject <Decodable>
 
 @property (strong, nonatomic, readonly) NSNumber *ID;
 @property (copy, nonatomic, readonly) NSString *_description;
 @property (copy, nonatomic, readonly) NSString *main;
 @property (copy, nonatomic, readonly) NSString *icon;
+@property (assign, nonatomic, readonly) WeatherType weatherType;
+
+-(NSString *) iconWeatherName;
 
 @end
