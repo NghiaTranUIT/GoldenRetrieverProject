@@ -7,6 +7,7 @@
 //
 
 #import "WeatherAttributeDataSource.h"
+#import "DateGlobal.h"
 
 @implementation SystemDataObj (WeatherAttributeDataSource)
 
@@ -15,11 +16,11 @@
 }
 
 -(NSString *)value {
-    return [NSString stringWithFormat:@"%@", self.sunrise];
+    return [DateGlobal humanHourFromUNIX:self.sunrise.floatValue];
 }
 
 -(NSString *)iconName {
-    return @"icon_sunrise";
+    return @"icon_attribute_sun";
 }
 
 @end
@@ -31,11 +32,11 @@
 }
 
 -(NSString *)value {
-    return [NSString stringWithFormat:@"%@", self.speed];
+    return [NSString stringWithFormat:@"%@ m/s", self.speed];
 }
 
 -(NSString *)iconName {
-    return @"icon_wind";
+    return @"icon_attribute_wind";
 }
 
 @end
@@ -47,11 +48,11 @@
 }
 
 -(NSString *)value {
-    return [NSString stringWithFormat:@"%@", self.temp];
+    return [NSString stringWithFormat:@"%@°F", self.temp];
 }
 
 -(NSString *)iconName {
-    return @"icon_temp";
+    return @"icon_attribute_temp";
 }
 
 @end

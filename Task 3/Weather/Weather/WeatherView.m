@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bigIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLbl;
 @property (weak, nonatomic) IBOutlet UILabel *statusLbl;
-@property (weak, nonatomic) IBOutlet UILabel *cityNameLbl;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView;
 
 @end
@@ -32,7 +31,6 @@
     self.bigIconImageView.image = [UIImage imageNamed:data.bigIconImageName];
     self.temperatureLbl.text = data.temperature;
     self.statusLbl.text = data.status;
-    self.cityNameLbl.text = data.cityName;
 
     // Update Stack View
     [self configureStackView:data.weatherAttributes];

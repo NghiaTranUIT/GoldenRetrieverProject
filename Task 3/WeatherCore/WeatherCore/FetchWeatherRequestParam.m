@@ -31,6 +31,7 @@
 -(NSDictionary<NSString *,id> *)buildParam {
     return @{@"lat": @(self.location.latitude),
              @"lon": @(self.location.longitude),
+             @"units": @"imperial",
              @"appid": self.appID};
 }
 

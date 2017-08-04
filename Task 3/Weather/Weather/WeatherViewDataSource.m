@@ -24,7 +24,7 @@
 }
 
 -(NSString *)temperature {
-    return [NSString stringWithFormat:@"%@", self.mainData.temp];
+    return [NSString stringWithFormat:@"%@°F", self.mainData.temp];
 }
 
 -(NSString *)status {
