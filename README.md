@@ -13,12 +13,12 @@ git clone --recursive https://github.com/NghiaTranUIT/GoldenRetrieverProject.git
 
 ## Structure
 ### Task 1
-+ ReadMe
-+ Xcode project with git
++ [README](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%201/readme.md)
++ [PROJECT](https://github.com/NghiaTranUIT/GoldenRetrieverProject_ReversedString)
 
 ### Task 2
-+ Readme
++ [README](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%202/readme.md)
 
 ### Task 3
-+ Xcode Project with Git
-+ Readme
++ [README](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/readme.md)
++ [PROJECT](https://github.com/NghiaTranUIT/GoldenRetrieverProject/tree/master/Task%203)
