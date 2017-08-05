@@ -4,7 +4,7 @@ Explain what happens when the following code is executed (ARC being disabled in 
 MyClass *myClass = [[[[MyClass alloc] init] autorelease] autorelease];
 ```
 
-**TL;DR**: 
+## TL;DR 
 The behavior after this code is executed is unexpected. A majority of time lead to crashed application.
 
 ## Long Answer
@@ -27,9 +27,9 @@ It seems to be harmless, right?
 Actually, it's serious problem.
 Let break down the code into small pieces.
 ```
-[MyClass alloc] init]
+[[MyClass alloc] init]
 ```
-When it's executed, MyClass's instance is created, we take an ownership (According to the first rule). On this time, the reference count set by one.
+When it's executed, MyClass's instance is created, we take an ownership ([First policy](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmRules.html#//apple_ref/doc/uid/20000994-BAJHFBGH)). On this time, the retain count set by one.
 
 ```
 [[[[MyClass alloc] init] autorelease] autorelease];
@@ -37,7 +37,7 @@ When it's executed, MyClass's instance is created, we take an ownership (Accordi
 Then we call -autorelease twice, it will be added to current NSAutoreleasePool twice.
 
 Finally, when NSAutoreleasePoll is getting released, the method -release will be called on this instance twice too.
-When the first time -release is called, the object retains count drop to zero. According to the second law, it will be destroyed itself.
+When the first time -release is called, the object retains count drop to zero. According to the [-release](https://developer.apple.com/documentation/objectivec/1418956-nsobject/1571957-release), it will be destroyed itself.
 
 Now when second -release is called, the method will send to destroyed object (dangling pointer). As a result, a whole application's crashed.
 
@@ -45,3 +45,4 @@ Now when second -release is called, the method will send to destroyed object (da
 I believe no one wants to do it. It probably occurs by someone's accident.
 Or it has special meaning. Personally, even we have a special reason which we did that. It's still a smell-code and contains implicit serious problems in the future.
 Not only a Pull-request reviewer pay huge attentions to discover it in thousand sand of code, every member should do too.
+
