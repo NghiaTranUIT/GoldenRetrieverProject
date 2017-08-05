@@ -59,3 +59,8 @@ Please take a look at main directory [gitlog](https://github.com/NghiaTranUIT/Go
 ### Weather Core
 ![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/Diagram/Weather_diagram_3.jpg)
 
+## Screenshot
+![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/Diagram/screenshot.jpg)
+
+## Design
+Inspired from https://www.pinterest.com/pin/36732553192271150/
