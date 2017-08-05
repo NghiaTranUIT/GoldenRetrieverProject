@@ -29,8 +29,8 @@
                     <color key="textColor" red="0.72148895260000001" green="0.72161453959999999" blue="0.72148102520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3q-Vm-VAX">
-                    <rect key="frame" x="42" y="79" width="42.5" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="k3q-Vm-VAX">
+                    <rect key="frame" x="41.5" y="79" width="42.5" height="24"/>
                     <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="20"/>
                     <color key="textColor" red="0.082338817420000002" green="0.082361035050000003" blue="0.082337401810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -45,11 +45,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="k3q-Vm-VAX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ydj-5B-I83" secondAttribute="leading" constant="8" id="7ni-b1-afa"/>
                 <constraint firstItem="k3q-Vm-VAX" firstAttribute="top" secondItem="lV7-ZR-xPM" secondAttribute="bottom" constant="6" id="Af0-J1-k0P"/>
                 <constraint firstItem="Ptq-bn-0H6" firstAttribute="top" secondItem="Ydj-5B-I83" secondAttribute="top" constant="22" id="GcQ-3X-vMb"/>
                 <constraint firstItem="lV7-ZR-xPM" firstAttribute="centerX" secondItem="Ydj-5B-I83" secondAttribute="centerX" id="N0B-gO-jJ5"/>
                 <constraint firstItem="Ptq-bn-0H6" firstAttribute="centerX" secondItem="Ydj-5B-I83" secondAttribute="centerX" id="Vaq-6q-gMm"/>
                 <constraint firstAttribute="bottom" secondItem="k3q-Vm-VAX" secondAttribute="bottom" constant="35" id="cd4-aO-vmL"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k3q-Vm-VAX" secondAttribute="trailing" constant="8" id="vk2-Ja-GFG"/>
                 <constraint firstItem="k3q-Vm-VAX" firstAttribute="centerX" secondItem="Ydj-5B-I83" secondAttribute="centerX" id="zcr-Q5-6xh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -27,7 +27,7 @@ static CGFloat Animation_Duration = 0.3;
 }
 
 -(IBAction) openSetting {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
 }
 
 -(void) fadeInWarning:(UIView *) parentView {

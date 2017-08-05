@@ -12,7 +12,7 @@
 
 // Location
 typedef void (^LocationBlock)(CLLocation *);
-typedef void (^LocationPermissionSuccess)();
+typedef void (^LocationPermissionSuccess)(void);
 
 @interface LocationService : NSObject
 

@@ -32,7 +32,7 @@
 }
 
 -(NSString *)value {
-    return [NSString stringWithFormat:@"%@ m/s", self.speed];
+    return [NSString stringWithFormat:@"%.02f m/s", [self.speed floatValue]];
 }
 
 -(NSString *)iconName {
@@ -48,7 +48,7 @@
 }
 
 -(NSString *)value {
-    return [NSString stringWithFormat:@"%@°F", self.temp];
+    return [NSString stringWithFormat:@"%ld°F", (long)[self.temp integerValue]];
 }
 
 -(NSString *)iconName {
