@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <WeatherCore/WeatherCore.h>
 
+
+/**
+ It represents the data actually need to be display in screen
+
+ If we change UI design in future, we don't need to change in WeatherAttributeView
+ Just defind the desired variable to be presented.
+
+ */
 @protocol WeatherAttributeDataSource <NSObject>
 
 @property (copy, nonatomic, readonly) NSString *title;
@@ -17,14 +25,24 @@
 
 @end
 
+
+/**
+ Extend SystemDataObj
+ */
 @interface SystemDataObj (WeatherAttributeDataSource) <WeatherAttributeDataSource>
 
 @end
 
+/**
+ Extend WindObj
+ */
 @interface WindObj (WeatherAttributeDataSource) <WeatherAttributeDataSource>
 
 @end
 
+/**
+ Extend MainDataObj
+ */
 @interface MainDataObj (WeatherAttributeDataSource) <WeatherAttributeDataSource>
 
 @end

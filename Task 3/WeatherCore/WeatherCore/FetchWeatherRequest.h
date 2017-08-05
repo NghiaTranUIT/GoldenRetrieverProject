@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "BaseRequest.h"
 
+
+/**
+ Represent FetchWeatherRequest API
+ */
 @interface FetchWeatherRequest : BaseRequest
 
 @end

@@ -49,15 +49,24 @@
 }
 
 -(void) requestWhenInUseAuthorization:(LocationPermissionSuccess)block {
+
+    // Copy block
+    // Best practice when storing block
     self.successBlock = [block copy];
+
+    // Request permission
     [self.manager requestWhenInUseAuthorization];
 }
 
 -(void) fetchLocation:(LocationBlock) block errorBlock:(ErrorBlock)error {
+
+    //Copy
     self.locationBlock = [block copy];
     self.errorBlock = [error copy];
 
-    // Fetch only one request
+    // Request location once
+    // We don't need percious location
+    // Just approximate
     [self.manager requestLocation];
 }
 
@@ -79,13 +88,16 @@
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
 
+    // Call block if we gaint permission
     switch (status) {
         case kCLAuthorizationStatusAuthorizedWhenInUse:
+
             if (self.successBlock) {
                 self.successBlock();
             }
             break;
 
+            // Otherwise, it's error
         default:
             if (self.errorBlock) {
                 self.errorBlock(nil);

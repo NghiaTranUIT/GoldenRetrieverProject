@@ -10,6 +10,16 @@
 #import <WeatherCore/WeatherCore.h>
 #import "WeatherAttributeDataSource.h"
 
+
+/**
+ I define WeatherViewDataSource Protocol
+
+ It represents the data actually need to be display in screen
+
+ If we change UI design in future, we don't need to change in WeatherView
+ Just defind the desired variable to be presented.
+
+ */
 @protocol WeatherViewDataSource <NSObject>
 
 @property (copy, nonatomic, readonly) NSString *locationName;
@@ -19,11 +29,14 @@
 @property (copy, nonatomic, readonly) NSString *status;
 @property (copy, nonatomic, readonly) NSString *cityName;
 
-
 -(NSArray<id<WeatherAttributeDataSource>> *) weatherAttributes;
 
 @end
 
+
+/**
+ Extend WeatherObj
+ */
 @interface WeatherObj (WeatherViewDataSource) <WeatherViewDataSource>
 
 @end

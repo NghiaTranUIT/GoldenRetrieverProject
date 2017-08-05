@@ -7,8 +7,7 @@
 //
 
 #import "OpenWeatherConfiguration.h"
-
-static NSString *const OpenWeatherAppID = @"95b9c4a2db2733275c713317d9961522";
+#import "Constants.h"
 
 @implementation OpenWeatherConfiguration
 

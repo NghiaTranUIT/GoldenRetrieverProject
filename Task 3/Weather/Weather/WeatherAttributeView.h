@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "WeatherAttributeDataSource.h"
 
+
+/**
+ WeatherAttributeView
+ */
 @interface WeatherAttributeView : UIView
 
+
+/**
+ Fill data with object or struct (swift) which adapt WeatherAttributeDataSource protocol
+
+ @param data Data
+ */
 -(void) configureCellWithData:(id<WeatherAttributeDataSource>) data;
 
 @end

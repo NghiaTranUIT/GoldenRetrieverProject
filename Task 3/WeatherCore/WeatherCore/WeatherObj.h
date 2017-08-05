@@ -17,6 +17,9 @@
 @class SystemDataObj;
 @class WeatherDataObj;
 
+/**
+ WeatherObj represents data from API
+ */
 @interface WeatherObj : NSObject <Decodable>
 
 @property (strong, nonatomic, readonly) CoordinateObj *coordinate;

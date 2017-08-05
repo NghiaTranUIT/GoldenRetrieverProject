@@ -10,8 +10,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Parammeter.h"
 
+
+/**
+ Parammeter for FetchWeatherAPI
+ It encansulates all required parammeter
+ */
 @interface FetchWeatherRequestParam: NSObject <Parammeter>
 
+// Data
 @property (assign, nonatomic, readonly) CLLocationCoordinate2D location;
 @property (copy, nonatomic, readonly) NSString *appID;
 

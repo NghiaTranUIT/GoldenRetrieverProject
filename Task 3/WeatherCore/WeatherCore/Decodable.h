@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ JSON Decodable
+
+ We should implement Decodable by own
+ It makes us independency and don't depend on any 3rd parties.
+
+ */
 @protocol Decodable <NSObject>
 
 +(instancetype) decode:(NSDictionary *) json;

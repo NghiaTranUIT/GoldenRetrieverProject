@@ -10,6 +10,10 @@
 
 typedef id (^MapObjectBlock)(id obj);
 
+
+/**
+ Map method from Swift
+ */
 @interface NSArray (Map)
 
 - (NSArray *)mapObjectsUsingBlock:(MapObjectBlock)block;

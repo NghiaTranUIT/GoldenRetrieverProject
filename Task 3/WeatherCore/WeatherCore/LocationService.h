@@ -10,18 +10,52 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
 
-// Location
-typedef void (^LocationBlock)(CLLocation *);
-typedef void (^LocationPermissionSuccess)(void);
-
+/**
+ Location Service
+ */
 @interface LocationService : NSObject
 
+
+/**
+ Singleton instance
+
+ In future, we can eliminate it
+
+ @return Instance
+ */
 +(instancetype) shareInstance;
 
+
+/**
+ Get authorizationStatus
+
+ @return CLAuthorizationStatus
+ */
 +(CLAuthorizationStatus) authorizationStatus;
+
+
+/**
+ Get locationServicesEnabled
+
+ @return Bool
+ */
 +(BOOL) locationServicesEnabled;
 
+
+/**
+ Request "when-in-use" authorization
+
+ @param block CompletionBlock
+ */
 -(void) requestWhenInUseAuthorization:(LocationPermissionSuccess) block;
+
+
+/**
+ Fetch current location
+
+ @param block Completion Block
+ @param error Error Block
+ */
 -(void) fetchLocation:(LocationBlock) block errorBlock:(ErrorBlock) error;
 
 @end

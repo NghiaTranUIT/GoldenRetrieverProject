@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ Provide the cozy place we can provide configuration for OpenWeatherService
+ */
 @interface OpenWeatherConfiguration : NSObject
 
 @property (copy, nonatomic, readonly) NSString *appID;

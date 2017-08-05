@@ -27,7 +27,15 @@
         return nil;
     }
 
-    // Decode
+    // We deocode object here
+    //
+    // In my intention
+    // It's the best place to describle how to decode object
+    //
+    // Because in future, we probably have 100+ API
+    // It's messy if we have some concrete class to handle JSONDecode
+    //
+    // We should seperate here for easily tracking
     return [WeatherObj decode:response];
 }
 

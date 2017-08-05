@@ -20,7 +20,15 @@
 
 -(void) configureCellWithData:(id<WeatherAttributeDataSource>) data {
 
-    // Layout data
+    //
+    // Fill data
+    //
+    // By using protocol WeatherAttributeDataSource here
+    //
+    // WeatherAttributeView doesn't depend on any Model Object inside WeatherCore anymore
+    //
+    // It means we doesn't need to modify this code if we change the ModelObject
+
     self.titleLbl.text = data.title;
     self.valueLbl.text = data.value;
     self.iconImageView.image = [UIImage imageNamed:data.iconName];

@@ -34,6 +34,13 @@
 
 @implementation WeatherObj
 
+
+/**
+ Decode JSON
+
+ @param json JSON Dictionary
+ @return WeatherObj Instance
+ */
 +(instancetype) decode:(NSDictionary *)json {
     WeatherObj *obj = [[WeatherObj alloc] init];
 
@@ -51,6 +58,9 @@
 
     NSArray *weathes = json[@"weather"];
     if (weathes != nil) {
+
+        // Using map instead foreach
+        // I prefer this one
         obj.weatherDatas = [weathes mapObjectsUsingBlock:^id(id obj) {
             return [WeatherDataObj decode:(NSDictionary *) obj];
         }];

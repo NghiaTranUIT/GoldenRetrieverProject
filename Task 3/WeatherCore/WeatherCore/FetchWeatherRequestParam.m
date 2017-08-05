@@ -29,6 +29,10 @@
 }
 
 -(NSDictionary<NSString *,id> *)buildParam {
+
+    // Gernerate Dictionary Parammeter
+    // We don't need to encode URL parammeter here
+    // Just return param
     return @{@"lat": @(self.location.latitude),
              @"lon": @(self.location.longitude),
              @"units": @"imperial",

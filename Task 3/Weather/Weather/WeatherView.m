@@ -25,7 +25,11 @@
 
 -(void) configureViewWithData:(id<WeatherViewDataSource>) data {
 
-    // Update data
+    //
+    // Fill data from object which adapt with WeatherViewDataSource
+    // By using protocol WeatherViewDataSource here
+    //
+    // WeatherView doesn't depend on any Model Object inside WeatherCore anymore
     self.locationNameLbl.text = data.locationName;
     self.dateTimeLbl.text = data.dateTime;
     self.bigIconImageView.image = [UIImage imageNamed:data.bigIconImageName];
@@ -43,6 +47,13 @@
 
     // Map to View
     NSArray<WeatherAttributeView *> *attributeViews = [attributes mapObjectsUsingBlock:^id(id<WeatherAttributeDataSource> obj) {
+
+        //
+        // We might get rid of boilerplate code here
+        // By extendind UIView with <XIBInitialzation> protocol
+        //
+        // But for now, it's good.
+        //
         WeatherAttributeView *view = [[NSBundle mainBundle] loadNibNamed:@"WeatherAttributeView" owner:nil options:nil].firstObject;
         [view configureCellWithData:obj];
         return view;

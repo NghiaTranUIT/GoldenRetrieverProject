@@ -44,15 +44,21 @@
 
 #pragma mark - Fetch Weather
 
+// It's on my purpose
+//
+// We encapsulate all essential requests in OpenWeatherService
+// We don't need to expose our internal resource to ourside
+//
 -(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) success error:(ErrorBlock) error {
 
-    // Param
+    // Create param
     FetchWeatherRequestParam *param = [[FetchWeatherRequestParam alloc] initWithLocation:location appID:self.configuration.appID];
 
-    // Request
+    // Create request
     FetchWeatherRequest *request = [[FetchWeatherRequest alloc] initWithParam:param];
     request.completionBlock = [success copy];
     request.errorBlock = [error copy];
+
     // Execute
     [self.networkService executeRequest:request];
 }

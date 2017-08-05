@@ -26,15 +26,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.viewModel = [[WeatherViewModel alloc] init];
+    //
+    // Init View model with default service
+    //
+    // In future, we can provided different Weather Service like Yahoo, Google
+    //
+    // Please take a look inside WeatherViewModel
+    //
+    self.viewModel = [[WeatherViewModel alloc] initWithDefaultService];
 
-    // Notification
+    //
+    // Observe Notification
+    // To check Location Permission and fetch data again
+    // Make sure it's up-to-date
+    //
     [self addNotification];
-    
+
+    //
     // Layout
+    // All layout should be responsible by View component instead of deadling directl on Controller
+    //
+    // A dream Controller should only coordinate data-flow
     [self setupSubView];
 
+    //
     // Fetch
+    // Try to request current location
+    //
     [self requestCurrentLocation];
 }
 
@@ -44,16 +62,32 @@
 
 #pragma mark - Notification
 -(void) addNotification {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterBackground) name:UIApplicationWillEnterForegroundNotification object:nil];
+
+    //
+    // Observe Enter Backtround Notification
+    // Because if user goes to Setting to enable Location Service or give permission
+    // then back to our app
+    //
+    // Here is place to check it
+    //
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
--(void) willEnterBackground {
+-(void) willEnterForeground {
     [self requestCurrentLocation];
 }
 
 #pragma mark - API
 -(void) requestCurrentLocation {
 
+    //
+    // Try to fetch location
+    // and Permission
+    //
+    // Personally I don't want to use Callback block. It's reasons cause nested-callback
+    // I prefer Promise approach
+    // or RxSwift
+    //
     __weak typeof(self) weakSelf = self;
     [self.viewModel requestCurrentLocation:^(CLLocation *location) {
         typeof(self) strongSelf = weakSelf;
@@ -77,6 +111,15 @@
     // Loader
     [SVProgressHUD show];
 
+    //
+    // Fetch Weather from Model
+    //
+    // Let imagine
+    // Actually Weather App doesn't need to care about OpenWeatherService or YahooService anymore
+    //
+    // In future, we probably suppot various WeatherService
+    // As a result, we don't need to modify this code
+    //
     __weak typeof(self) weakSelf = self;
     [self.viewModel fetchWeatherAtLocation:location.coordinate completion:^(WeatherObj * _Nullable weather) {
         typeof(self) strongSelf = weakSelf;

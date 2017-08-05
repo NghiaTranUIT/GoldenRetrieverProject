@@ -40,6 +40,8 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
     return self;
 }
 
+#pragma mark - Default
+
 -(AFURLSessionManager *) defaultManager {
     NSURLSessionConfiguration *configuration = [self defaultConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
@@ -53,13 +55,22 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
     return configure;
 }
 
+#pragma mark - Private
+
 -(void) executeRequest:(id<Requestable>) request {
 
+    // Build request
+    // Because we probably ship our SDK to the developer over the world.
+    // Object or Struct (SWIFT) work as well
+    //
     NSURLRequest *urlRequest = [request buildRequest];
 
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    // Start to fetch
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:urlRequest
+                                                     completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
 
         if (error) {
+            // Handle Error
             [request handleError:error];
             return ;
         }
@@ -67,6 +78,8 @@ static NSString *const k_Queue_Background_Name = @"com.nghiatran.queue.backgroun
         // Success
         [request handleCompletion: responseObject];
     }];
+
+    // Start
     [dataTask resume];
 }
 

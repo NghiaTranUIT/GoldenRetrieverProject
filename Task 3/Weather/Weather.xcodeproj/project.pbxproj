@@ -22,7 +22,6 @@
 		BA8B82D81F3473670047E635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8B82D61F3473670047E635 /* LaunchScreen.storyboard */; };
 		BA8B82E31F3473670047E635 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8B82E21F3473670047E635 /* WeatherTests.m */; };
 		BA8B83401F3475EE0047E635 /* WeatherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8B833F1F3475EE0047E635 /* WeatherCore.framework */; };
-		BA92C0281F3497E7002BA1E8 /* screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA92C0271F3497E7002BA1E8 /* screen.jpg */; };
 		BA92C02F1F349842002BA1E8 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA92C0291F349842002BA1E8 /* SF-UI-Text-Bold.otf */; };
 		BA92C0301F349842002BA1E8 /* SF-UI-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA92C02A1F349842002BA1E8 /* SF-UI-Text-Heavy.otf */; };
 		BA92C0311F349842002BA1E8 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA92C02B1F349842002BA1E8 /* SF-UI-Text-Light.otf */; };
@@ -33,7 +32,6 @@
 		BA92C03D1F349B7F002BA1E8 /* WeatherAttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA92C03C1F349B7F002BA1E8 /* WeatherAttributeView.xib */; };
 		BA92C0401F349B89002BA1E8 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C03F1F349B89002BA1E8 /* WeatherView.m */; };
 		BA92C0421F349B91002BA1E8 /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA92C0411F349B91002BA1E8 /* WeatherView.xib */; };
-		BA92C0441F349BFB002BA1E8 /* attribute.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA92C0431F349BFB002BA1E8 /* attribute.jpg */; };
 		BA92C0481F34A33E002BA1E8 /* WeatherViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C0471F34A33E002BA1E8 /* WeatherViewDataSource.m */; };
 		BA92C04C1F34A594002BA1E8 /* WeatherAttributeDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C04B1F34A594002BA1E8 /* WeatherAttributeDataSource.m */; };
 /* End PBXBuildFile section */
@@ -77,7 +75,6 @@
 		BA8B82E21F3473670047E635 /* WeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTests.m; sourceTree = "<group>"; };
 		BA8B82E41F3473670047E635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA8B833F1F3475EE0047E635 /* WeatherCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeatherCore.framework; path = "../WeatherCore/build/Debug-iphoneos/WeatherCore.framework"; sourceTree = "<group>"; };
-		BA92C0271F3497E7002BA1E8 /* screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screen.jpg; sourceTree = "<group>"; };
 		BA92C0291F349842002BA1E8 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
 		BA92C02A1F349842002BA1E8 /* SF-UI-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Heavy.otf"; sourceTree = "<group>"; };
 		BA92C02B1F349842002BA1E8 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 		BA92C03E1F349B89002BA1E8 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
 		BA92C03F1F349B89002BA1E8 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
 		BA92C0411F349B91002BA1E8 /* WeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
-		BA92C0431F349BFB002BA1E8 /* attribute.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = attribute.jpg; sourceTree = "<group>"; };
 		BA92C0461F34A33E002BA1E8 /* WeatherViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewDataSource.h; sourceTree = "<group>"; };
 		BA92C0471F34A33E002BA1E8 /* WeatherViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewDataSource.m; sourceTree = "<group>"; };
 		BA92C04A1F34A594002BA1E8 /* WeatherAttributeDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherAttributeDataSource.h; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 		BA688F2C1F34783F00E9239E /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				BA92C0431F349BFB002BA1E8 /* attribute.jpg */,
-				BA92C0271F3497E7002BA1E8 /* screen.jpg */,
 				BA8B82CB1F3473670047E635 /* AppDelegate.h */,
 				BA8B82CC1F3473670047E635 /* AppDelegate.m */,
 			);
@@ -435,7 +429,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0ABD291F34D00C004B0070 /* LocationWarningView.xib in Resources */,
-				BA92C0441F349BFB002BA1E8 /* attribute.jpg in Resources */,
 				BA92C0321F349842002BA1E8 /* SF-UI-Text-Medium.otf in Resources */,
 				BA92C0311F349842002BA1E8 /* SF-UI-Text-Light.otf in Resources */,
 				BA92C0331F349842002BA1E8 /* SF-UI-Text-Regular.otf in Resources */,
@@ -444,7 +437,6 @@
 				BA92C03D1F349B7F002BA1E8 /* WeatherAttributeView.xib in Resources */,
 				BA92C0341F349842002BA1E8 /* SF-UI-Text-Semibold.otf in Resources */,
 				BA8B82D81F3473670047E635 /* LaunchScreen.storyboard in Resources */,
-				BA92C0281F3497E7002BA1E8 /* screen.jpg in Resources */,
 				BA92C0301F349842002BA1E8 /* SF-UI-Text-Heavy.otf in Resources */,
 				BA688F321F34785A00E9239E /* WeatherViewController.xib in Resources */,
 				BA8B82D51F3473670047E635 /* Assets.xcassets in Resources */,

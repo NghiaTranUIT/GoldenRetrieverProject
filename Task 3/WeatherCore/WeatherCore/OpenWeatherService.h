@@ -9,19 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
+#import "WeatherServiceProtocol.h"
 
 @class WeatherObj;
 @class NetworkService;
 @class OpenWeatherConfiguration;
 
-@interface OpenWeatherService : NSObject
+/**
+ Open Weather Service which correspond with OpenWeatherAPI
+ */
+@interface OpenWeatherService : NSObject <WeatherServiceProtocol>
 
 // Init
 -(instancetype) initWithNetworkService:(NetworkService *) service
                          configuration:(OpenWeatherConfiguration *) configuration;
 -(instancetype) initWithNetworkService:(NetworkService *) service;
-
-// Fetch
--(void) fetchWeatherAtLocation:(CLLocationCoordinate2D) location completion:(WeatherCompletionBlock) success error:(ErrorBlock) error;
 
 @end

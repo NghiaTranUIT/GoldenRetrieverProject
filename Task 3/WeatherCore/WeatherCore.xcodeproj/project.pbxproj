@@ -50,6 +50,7 @@
 		BA92C0231F3495B2002BA1E8 /* WeatherViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BA92C0211F3495B2002BA1E8 /* WeatherViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA92C0241F3495B2002BA1E8 /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92C0221F3495B2002BA1E8 /* WeatherViewModel.m */; };
 		BA92C0261F34968B002BA1E8 /* PublicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = BA92C0251F3495E1002BA1E8 /* PublicHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAB5CA221F3556F900842732 /* WeatherServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB5CA201F3556F900842732 /* WeatherServiceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		BA92C0211F3495B2002BA1E8 /* WeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewModel.h; sourceTree = "<group>"; };
 		BA92C0221F3495B2002BA1E8 /* WeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewModel.m; sourceTree = "<group>"; };
 		BA92C0251F3495E1002BA1E8 /* PublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeader.h; sourceTree = "<group>"; };
+		BAB5CA201F3556F900842732 /* WeatherServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherServiceProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BA1273221F34EC8D001BE595 /* Reachability */,
-				BA92C01C1F349569002BA1E8 /* Open Weather Service */,
+				BA92C01C1F349569002BA1E8 /* Weather Service */,
 				BA92C01B1F349560002BA1E8 /* Extensions */,
 				BA688F681F347E1600E9239E /* Json Mapper */,
 				BA688F551F347D6900E9239E /* Location Service */,
@@ -309,15 +311,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		BA92C01C1F349569002BA1E8 /* Open Weather Service */ = {
+		BA92C01C1F349569002BA1E8 /* Weather Service */ = {
 			isa = PBXGroup;
 			children = (
-				BA92C01D1F34957B002BA1E8 /* Configuration */,
-				BA688F5F1F347D9700E9239E /* Request */,
-				BA92C00D1F348BBC002BA1E8 /* OpenWeatherService.h */,
-				BA92C00E1F348BBC002BA1E8 /* OpenWeatherService.m */,
+				BAB5CA1F1F3556D900842732 /* Protocol */,
+				BAB5CA241F35593100842732 /* Open Weather */,
 			);
-			name = "Open Weather Service";
+			name = "Weather Service";
 			sourceTree = "<group>";
 		};
 		BA92C01D1F34957B002BA1E8 /* Configuration */ = {
@@ -354,6 +354,25 @@
 			name = Weather;
 			sourceTree = "<group>";
 		};
+		BAB5CA1F1F3556D900842732 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BAB5CA201F3556F900842732 /* WeatherServiceProtocol.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		BAB5CA241F35593100842732 /* Open Weather */ = {
+			isa = PBXGroup;
+			children = (
+				BA92C01D1F34957B002BA1E8 /* Configuration */,
+				BA688F5F1F347D9700E9239E /* Request */,
+				BA92C00D1F348BBC002BA1E8 /* OpenWeatherService.h */,
+				BA92C00E1F348BBC002BA1E8 /* OpenWeatherService.m */,
+			);
+			name = "Open Weather";
+			sourceTree = "<group>";
+		};
 		E8B5AFC9BD5A874E5E31266F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +393,7 @@
 				BA92C0261F34968B002BA1E8 /* PublicHeader.h in Headers */,
 				BA688F261F34781800E9239E /* Constants.h in Headers */,
 				BA688F581F347D7800E9239E /* LocationService.h in Headers */,
+				BAB5CA221F3556F900842732 /* WeatherServiceProtocol.h in Headers */,
 				BA688F3E1F347C5800E9239E /* CoordinateObj.h in Headers */,
 				BA688F6A1F347E5800E9239E /* Decodable.h in Headers */,
 				BA1273251F34ECA7001BE595 /* Reachability.h in Headers */,

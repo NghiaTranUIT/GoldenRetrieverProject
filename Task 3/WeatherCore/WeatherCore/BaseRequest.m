@@ -45,6 +45,14 @@
 }
 
 -(NSURLRequest *)buildRequest {
+
+    //
+    // Build and encode URL
+    // I reused this useful component from AFNetworking
+    //
+    // In future, we can implement our RequestSerializer
+    // and eliminate AFNetworking as well.
+    //
     NSString *fullPath = [NSString stringWithFormat:@"%@%@", self.baseURL, self.path];
     return [[AFHTTPRequestSerializer serializer] requestWithMethod:[self httpMethodString]
                                                   URLString:fullPath
@@ -69,6 +77,12 @@
     }
 }
 
+/**
+ 
+ Stupid method to convert Enum to String
+
+ @return NSString
+ */
 -(NSString *) httpMethodString {
     switch ([self httpMethod]) {
         case HTTPMethodGET:

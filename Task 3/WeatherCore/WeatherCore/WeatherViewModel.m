@@ -12,20 +12,39 @@
 
 @interface WeatherViewModel ()
 
-@property (strong, nonatomic) OpenWeatherService *weatherService;
+@property (strong, nonatomic) id<WeatherServiceProtocol> weatherService;
 @property (strong, nonatomic) LocationService *locationService;
 
 @end
 
 @implementation WeatherViewModel
 
--(instancetype) init {
+-(instancetype) initWithDefaultService {
+    OpenWeatherService *service = [[OpenWeatherService alloc] init];
+    return [self initWithService:service];
+}
+
+-(instancetype) initWithService:(id<WeatherServiceProtocol>) service {
     self = [super init];
 
     if (self) {
 
-        // Default service
-        self.weatherService = [[OpenWeatherService alloc] init];
+        // Weather service
+        //
+        // Currently, WeatherViewModel doesn't heavily depended on any certain OpenWeatherService
+        // It's really flexible when we need different WeatherAPI from another source
+        //
+        // Only things we should to is create new Class which apdapt WeatherServiceProtocol
+        // For example, YahooWeatherService, GoogleWeatherService
+        //
+        // It's following totally SOLID principle
+        //
+        self.weatherService = service;
+
+        // Location service should be singleton for temporary
+        // Personally I think we shouldn't do that in production
+        //
+        // Instead, we defind LocationService Protocol
         self.locationService = [LocationService shareInstance];
     }
 
@@ -38,11 +57,17 @@
 
 -(void)requestCurrentLocation:(LocationBlock)locationBlock errorBlock:(ErrorBlock)errorBlock {
 
-    CLAuthorizationStatus state = [self authorizationStatus];
+    // Get current Status
+    CLAuthorizationStatus status = [self authorizationStatus];
 
-    switch (state) {
+    // Switch
+    switch (status) {
         case kCLAuthorizationStatusNotDetermined: {
             __weak typeof(self) weakSelf = self;
+
+            //
+            // Request permission
+            // then fetching current location
             [self.locationService requestWhenInUseAuthorization:^{
                 typeof(self) strongSelf = weakSelf;
                 [strongSelf.locationService fetchLocation:locationBlock errorBlock:errorBlock];
@@ -51,6 +76,9 @@
         }
         case kCLAuthorizationStatusDenied:
         case kCLAuthorizationStatusRestricted:
+
+            // If status is Denied or Restricted
+            // Notify Error block
             if (errorBlock) {
                 errorBlock(nil);
             }
@@ -58,6 +86,9 @@
 
         case kCLAuthorizationStatusAuthorizedAlways:
         case kCLAuthorizationStatusAuthorizedWhenInUse:
+
+            // If it's already
+            // Fetch location
             [self.locationService fetchLocation:locationBlock errorBlock:errorBlock];
 
     }

@@ -10,6 +10,18 @@
 #import "Requestable.h"
 #import "Constants.h"
 
+
+/**
+ Base Request
+
+ Objective-C don't allow us to provide default implementation for Protocol
+
+ It's limitation, to workground it
+ I create BaseClass to provide common method
+
+ But we need to find the way to get rid of BaseClass
+
+ */
 @interface BaseRequest : NSObject <Requestable>
 
 @property (copy, nonatomic, nullable) CompletionBlock completionBlock;
