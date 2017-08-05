@@ -34,6 +34,14 @@ As I only have 24 hours for 3 tasks. There are few minor things which I haven't 
 + Few classes are still depended on certain classes. As SOLID principle, it's not good. We should get rid of those by creating some abstract protocols.
 + Missing unit-tests 😅. I admit it's really easy to test WeatherCore. I will do it after a submission.
 
-## Infrastructure
-![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%201/Reversed_String_Diagram.jpg)
+## Diagrams
+
+### Infrastructure
+![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/Diagram/Weather_diagram_1.jpg)
+
+### Weather iOS app
+![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/Diagram/Weather_diagram_2.jpg)
+
+### Weather Core
+![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%203/Diagram/Weather_diagram_3.jpg)
 
