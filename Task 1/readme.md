@@ -1,14 +1,14 @@
 
-Write a function which takes a string as argument and returns the string reversed. For example, "abcdef" becomes "fedcba". Do not use the reverse method. Does it work with emojis?
 =======
 Write a function which takes a string as an argument and returns the string reversed. For example, "abcdef" becomes "fedcba". Do not use the reverse method. Does it work with emojis?
 
 ## Requirement
 Because Xcode doesn't support Playground for Objective-C (actually it's https://github.com/krzysztofzablocki/Playgrounds)
-So I create a self-explanatory iOS application for a demonstration.
-System
+So I created a self-explanatory iOS application for a demonstration.
+
+## System
 + iOS >= 9.3
-+ Xcode 8.3.1
++ Xcode 9 beta 4
 
 ## What've I done?
 + Fundamental algorithm to reserve string
@@ -22,6 +22,9 @@ System
 + Follow SOLID principles.
 + Easily extend in future by creating new Middleware. For example: AddHashtagMiddleware, ConvertTextToEmojiMiddleware, etc.
 + Unit test.
+
+## Algorithm
+
 
 ## Does it work with emojis?
 Yes, it's worked as expected with Emoji.
@@ -50,4 +53,4 @@ The best, elegant solution which provided from Apple is
                                    usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
                                        [result addObject:substring];
                                    }];
-                                   ```
+ ```
