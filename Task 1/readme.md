@@ -23,7 +23,7 @@ So I created a self-explanatory iOS application for a demonstration.
 + Unit test.
 
 ## Algorithm
-
+![alt text](https://github.com/NghiaTranUIT/GoldenRetrieverProject/blob/master/Task%201/Reversed_String_Diagram.jpg)
 
 ## Does it work with emojis?
 Yes, it's worked as expected with Emoji.
