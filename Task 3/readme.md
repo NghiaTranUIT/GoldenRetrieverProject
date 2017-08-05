@@ -12,7 +12,6 @@ Replace your own key at *OpenWeatherAppID* in WeatherCore/Constants.h
 // API
 static NSString * _Nonnull const OpenWeatherAppID = @"xxx";
 ```
-
 ## System
 + iOS >= 9.3
 + Xcode 9 beta 4
@@ -43,6 +42,11 @@ As I only have 24 hours for 3 tasks. There are few minor things which I haven't 
 + Still dependency on AFNetworking. The reason I've struggled with URLEncoding and it makes me a little bit stress. So I made a decision to reuse AFNetworking to workaround firstly. => In future, I will implement Network class, no dependency on any 3rd parties. Convenience to ship our SDK to the world.
 + Few classes are still depended on certain classes. As SOLID principle, it's not good. We should get rid of those by creating some abstract protocols.
 + Missing unit-tests 😅. I admit it's really easy to test WeatherCore. I will do it after a submission.
+
+## Gitlog
+I didn't pay attention which git I'm using for a while. 
+Instead of using own git (as a submodule), I used git from main directory by accident.
+Please take a look at main directory [gitlog](https://github.com/NghiaTranUIT/GoldenRetrieverProject/commits/master)
 
 ## Diagrams
 
