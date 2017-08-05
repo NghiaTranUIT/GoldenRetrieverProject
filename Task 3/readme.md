@@ -2,19 +2,29 @@
 Make an app that pulls weather forecast data for the user's current location, from http://openweathermap.org/ , and displays it nicely. The app doesn't need to look very fancy. You also need to sign up for a free licence key. (You don't need to submit the key, we have our own.)
 
 ## Requirement
-Open Weather API
+Navigate to workspace directory.
+```
+$ > pod install
+```
+Replace your own key at *OpenWeatherAppID* in WeatherCore/Constants.h
+
+```
+// API
+static NSString * _Nonnull const OpenWeatherAppID = @"xxx";
+```
 
 ## System
 + iOS >= 9.3
 + Xcode 9 beta 4
 
 ## What've I done?
-+ Weather Core and Weather App
-+ Following SOLID pricinple
++ Weather Core and Weather App.
++ Following SOLID pricinple.
 + Weather Core and Weather app are heavily dependencied on various Abtracts classes instead of concrete classes.
 + Easily extend new Weather Service For example, YahooWeatherService, GoogleWeatherService.
 + MVVM (but no binding isn't supported).
 + Simple Internet reachability.
++ Ability to re-check Location permission when app enters to foreground state.
 
 ## Achievements
 + Weather Core framework takes 100% responsibility for Data logic.
